@@ -1,0 +1,113 @@
+@import 'utils/libs';
+@import 'utils/vars';
+@import 'utils/mixins';
+@import 'utils/fonts';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  height: 100%;
+}
+
+@media screen and (min-width: $lgDesktopWidth) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: $desktopWidth) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: $tableWidth) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $bgColor;
+  color: $defaultColor;
+}
+
+main {
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 rem(20);
+  max-width: $desktopWidth;
+  @media screen and (min-width: $lgDesktopWidth) {
+    max-width: $lgDesktopWidth;
+  }
+  @media screen and (max-width: $desktopWidth) {
+    max-width: $smDesktopWidth;
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: $lgTableWidth;
+  }
+  @media screen and (max-width: $lgTableWidth) {
+    max-width: $tableWidth;
+  }
+  @media screen and (max-width: $tableWidth) {
+    max-width: 100%;
+  }
+}
+
+b {
+  color: $primaryColor;
+}
+
+a {
+  text-decoration: none
+}
+
+.btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: rem(24);
+  line-height: rem(28);
+  text-align: center;
+  text-transform: uppercase;
+  color: $mainFontColor;
+
+  &.primary {
+      background-color: $primaryColor;
+  }
+
+  &.neutral {
+      background-color: $neutralColor;
+  }
+}
+
+// Import section
+
+@import 'sections/header';
+@import 'sections/main';
+@import 'sections/universe';
+@import 'sections/game-list';
+@import 'sections/showcase';
+@import 'sections/free';
+@import 'sections/achievements';
+@import 'sections/offer';
+@import 'sections/partners';
+@import 'sections/footer';

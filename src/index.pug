@@ -1,0 +1,18 @@
+mixin image(name, title)
+    -title = title || name;
+    img.src(src=require(`../src/images/${name}.png`) alt=title)
+doctype html
+html(lang='en')
+    include pug/head
+    body
+        include pug/sections/header
+        main 
+            include pug/sections/main
+            include pug/sections/universe
+            include pug/sections/game-list
+            include pug/sections/showcase
+            include pug/sections/free
+            include pug/sections/achievements
+            include pug/sections/offer
+            include pug/sections/partners
+        include pug/sections/footer
