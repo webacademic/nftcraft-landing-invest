@@ -1,0 +1,11 @@
+footer 
+    .text 
+        p NFTcraft.game is an innovative Play to Earn platform where the potential of NFTs are realized.
+        p.small For partners and business inquiries contact  
+            a(href="mailto:hello@nftcraft.game", rel="noopener noreferrer") hello@nftcraft.game
+    .links 
+        -let links = ['t.me/NFTcraftRU', 't.me/NFTcraftEN', 'medium.com/@NFTcraft', 'discord.gg/RqepYZWpk6', 'twitter.com/NFTcraft_game']
+        each val, index in links
+            a(href="http://"+(val), target="_blank", rel="noopener noreferrer")                     
+                +image('footer/link-'+(index+1),  val)
+    .rights All Rights Reserved
