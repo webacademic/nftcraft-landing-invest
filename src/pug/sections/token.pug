@@ -1,27 +1,20 @@
 section.token   
     .container 
-        h2.title NCT – токен платформы по <br> увеличению доходности pc игр
-        p.descr Платформа NFTCRAFT Monetization позволяет сделать любую PC игру эффективным источником дохода за счет интеграции блокчейна, технологий масштабирования и проверенной экономической модели.
-        a(href="").btn.primary buy nct
-        .info 
-            .label The Ecosystem is powered by the core project (NCT) governance token.
-            .row 
-                .block 
-                    .name Name:
-                    .count NFTcraft core token - NCT
-            .row 
-                .block 
-                    .name NTC Price at IGO (USD):
-                    .count $50
-                .block 
-                    .name Initial Market Cap:
-                    .count $50M
-            .row 
-                .block 
-                    .name Max Total Supply:
-                    .count 10 000 000
-                .block 
-                    .name Fully Diluted Cap:
-                    .count $3B
+        h2.title NCT – УПРАВЛЯЮЩИЙ токен пРОЕКТА 
+        ul 
+            li Общий запас: 50 000 000 NCT
+            li Для покупки доступно: 2 500 000 NCT
+            li Стоимость NCT: 0,15 USD
+        .exchanger
+            .label Amount:
+            .input 
+                input.nct(type="number", value="1000", name="nct")
+                span NCT
+            .input
+                input(type="number", value="1000", name="ucdt")
+                span USDT
+            button() 
+                span buy nct
+                +image('token/btn__arrow')
         .img 
             +image('token/bg')
