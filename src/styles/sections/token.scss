@@ -1,13 +1,34 @@
 .token {
+    padding-top: rem(100);
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
     .container {
         position: relative;
+    }
+    ul {
+        list-style-type: disc;
+        margin-left: 22px;
+        margin-bottom: 48px;
+    }
+    li {
+        font-weight: 400;
+        font-size: rem(24);
+        line-height: rem(28);
+        color: rgba(255, 255, 255, 0.8);
     }
     .img {
         position: absolute;
         right: rem(-232);
         width: rem(1511);
         height: rem(780);
-        bottom: 0;
+        top: rem(-200);
+        z-index: -1;
     }
     .title {
         position: relative;
@@ -18,71 +39,153 @@
         text-transform: uppercase;
         margin-bottom: rem(26);
         text-shadow: $mainShadow;
-        
     }
-    .descr {
-        position: relative;
-        z-index: 1;
-        font-weight: 400;
-        font-size: rem(20);
-        line-height: 140%;
-        margin-bottom: rem(48);
-        opacity: .8;
-        max-width: rem(540);
-    }
-    .btn {
-        position: relative;
-        z-index: 1;
+    .exchanger {
         width: rem(288);
-        height: rem(64);
-        margin-bottom: rem(48);
-    }
-    .info {
-        position: relative;
-        z-index: 1;
-        padding: rem(20);
-        background: url(./../images/main/info-bg.svg) center center no-repeat;
-        background-size: 100% 100%;
-        max-width: rem(288);
         .label {
-            color: $emeraldColor;
             font-weight: 700;
-            font-size: rem(11);
-            line-height: 150%;
-            margin-bottom: rem(14);
-            max-width: rem(226);
+            font-size: 20px;
+            line-height: 23px;
+            color: #ffffff;
+            margin-bottom: 8px;
         }
-        .row {
-            display: flex;
-            gap: rem(12);
-            &:not(:last-child) {
-                margin-bottom: rem(14);
+        .input {
+            position: relative;
+            width: 100%;
+            height: rem(64);
+            margin-bottom: 24px;
+            input {
+                height: 100%;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.4);
+                box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.1), inset 0px 4px 12px rgba(0, 0, 0, 0.45);
+                border: none;
+                outline: none;
+                font-weight: 700;
+                font-size: rem(28);
+                line-height: 130%;
+                text-transform: uppercase;
+                color: #ffffff;
+                padding: 13px 16px;
+                &.nct {
+                    color: #00a3ff;
+                }
+            }
+            span {
+                position: absolute;
+                right: rem(10);
+                top: 50%;
+                transform: translateY(-50%);
+                font-weight: 700;
+                font-size: rem(20);
+                line-height: 130%;
+                text-align: right;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.6);
             }
         }
-        .name {
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 64px;
+            background: #0066ff;
+            box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.6), inset -1px 1px 2px rgba(255, 255, 255, 0.4),
+                inset 1px 1px 2px rgba(255, 255, 255, 0.4);
+            border: none;
             font-weight: 700;
-            font-size: rem(8.5);
-            line-height: 120%;
-            margin-bottom: rem(2);
-            color: #6AC9CE;
-        }
-        .count {
-            font-weight: 700;
-            font-size: rem(11);
-            line-height: 120%;
-            color: #BDFBFF;
-            
-        }
-        .block {
-            width: 50%;
+            font-size: 24px;
+            line-height: 28px;
+            text-align: right;
+            text-transform: uppercase;
+            color: #ffffff;  
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            z-index: 1;
+            &:hover{
+                box-shadow: 0px 0px 5px rgba(255, 255, 255, 1), inset -1px 1px 2px rgba(255, 255, 255, 0.8),
+                inset 1px 1px 4px rgba(255, 255, 255, 1);
+                img{
+                    transform: translateX(10px);
+                }
+            }
+            img{
+                transition: all 1s ease-in-out;
+            }
+            span{
+                padding-right: 16px;
+            } 
+            &:disabled{
+                background: rgb(145, 145, 145);
+                pointer-events: none;
+                cursor: default;
+            }       
         }
     }
+
+    // .descr {
+    //     position: relative;
+    //     z-index: 1;
+    //     font-weight: 400;
+    //     font-size: rem(20);
+    //     line-height: 140%;
+    //     margin-bottom: rem(48);
+    //     opacity: 0.8;
+    //     max-width: rem(540);
+    // }
+    // .btn {
+    //     position: relative;
+    //     z-index: 1;
+    //     width: rem(288);
+    //     height: rem(64);
+    //     margin-bottom: rem(48);
+    // }
+    // .info {
+    //     position: relative;
+    //     z-index: 1;
+    //     padding: rem(20);
+    //     background: url(./../images/main/info-bg.svg) center center no-repeat;
+    //     background-size: 100% 100%;
+    //     max-width: rem(288);
+    //     .label {
+    //         color: $emeraldColor;
+    //         font-weight: 700;
+    //         font-size: rem(11);
+    //         line-height: 150%;
+    //         margin-bottom: rem(14);
+    //         max-width: rem(226);
+    //     }
+    //     .row {
+    //         display: flex;
+    //         gap: rem(12);
+    //         &:not(:last-child) {
+    //             margin-bottom: rem(14);
+    //         }
+    //     }
+    //     .name {
+    //         font-weight: 700;
+    //         font-size: rem(8.5);
+    //         line-height: 120%;
+    //         margin-bottom: rem(2);
+    //         color: #6ac9ce;
+    //     }
+    //     .count {
+    //         font-weight: 700;
+    //         font-size: rem(11);
+    //         line-height: 120%;
+    //         color: #bdfbff;
+    //     }
+    //     .block {
+    //         width: 50%;
+    //     }
+    // }
 }
 
 @media (max-width: $lgTableWidth) {
     .token {
         .img {
-            opacity: .5;
+            opacity: 0.5;
         }
     }
 }
@@ -102,6 +205,5 @@
             align-items: center;
             flex-direction: column;
         }
-
     }
 }
