@@ -9,10 +9,22 @@
         position: absolute;
         bottom: 14vw;
         right: 0;
-        width: rem(689);
+        max-width: rem(689);
+        width: 100%;
         img {
             width: 100%;
             height: 100%;
+        }
+    }
+}
+
+@media (max-width: $tableWidth) {
+    .main {
+        .logo {
+            top: 14%;
+            bottom: auto;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 }
