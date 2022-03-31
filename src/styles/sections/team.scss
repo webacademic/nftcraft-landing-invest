@@ -1,5 +1,5 @@
 .team {
-    margin-bottom: 80px;
+    margin-bottom: rem(80);
     .title {
         text-align: center;
         text-transform: uppercase;
@@ -31,12 +31,19 @@
             font-weight: 700;
             font-size: rem(30.0151);
             text-shadow: 0px 0px 20.0101px #a12bff, 0px 0px 5.00252px #a12bff;
-            margin-bottom: 4px;
+            margin-bottom: rem(4);
         }
         &.position {
             font-weight: 400;
             font-size: rem(28);            
             opacity: 0.7;
+        }
+    }
+}
+@media (max-width: $smTableWidth) {
+    .team {
+        .title {
+            font-size: 34px;
         }
     }
 }
