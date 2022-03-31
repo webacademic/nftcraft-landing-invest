@@ -1,0 +1,18 @@
+.main {
+    background: url(./../images/main/bg.png);
+    background-size: cover;
+    .container {
+        position: relative;
+        height: 100vh;
+    }
+    .logo {
+        position: absolute;
+        bottom: 14vw;
+        right: 0;
+        width: rem(689);
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
