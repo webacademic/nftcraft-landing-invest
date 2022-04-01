@@ -185,7 +185,7 @@
 @media (max-width: $lgTableWidth) {
     .token {
         .img {
-            opacity: 0.5;
+            opacity: 0.2;
         }
     }
 }
@@ -198,6 +198,12 @@
             br {
                 display: none;
             }
+        }
+        ul {
+            margin-left: 0;
+        }
+        li {
+            list-style: none;
         }
         .container {
             text-align: center;
