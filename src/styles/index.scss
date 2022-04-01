@@ -47,7 +47,7 @@ main {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 rem(20);
+  padding: 0 rem(40);
   max-width: $desktopWidth;
   @media screen and (min-width: $lgDesktopWidth) {
     max-width: $lgDesktopWidth;
