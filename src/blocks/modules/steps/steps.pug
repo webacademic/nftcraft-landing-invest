@@ -1,21 +1,24 @@
 section.steps
     .container 
-        .title СТАДИИ РАЗБЛОКИРОВКИ токена
+        .title(data-lang="step-title") СТАДИИ РАЗБЛОКИРОВКИ токена
     .list
         .step 
-            p.text 10 % токенов разблокируется 
-                span через 45 дней
-            p.time 45д
+            p.text
+                span(data-lang="step-percent-1") 10 % токенов разблокируется 
+                span.grey(data-lang="step-days-1") через 45 дней
+            p.time(data-lang="step-days-1-small") 45д
             p.percent +10%
         .step 
-            p.text 5 % токенов разблокируется
-                span через следующие 30 дней 
-            p.time 30д
+            p.text
+                span(data-lang="step-percent-2") 5 % токенов разблокируется
+                span.grey(data-lang="step-days-2") через следующие 30 дней 
+            p.time(data-lang="step-days-2-small") 30д
             p.percent +5%
         .step 
-            p.text Далее от 1 до 5% в месяц 
-                span по договоренности 
-            p.time 30д
+            p.text
+                span(data-lang="step-percent-3") Далее от 1 до 5% в месяц 
+                span.grey(data-lang="step-days-3") по договоренности  
+            p.time(data-lang="step-days-3-small") 30д
             p.percent +10%
                 
                 
