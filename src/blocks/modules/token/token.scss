@@ -206,7 +206,7 @@
 
 @media (max-width: $smTableWidth) {
     .token {
-        transform: translateY(-180px);
+        padding-top: 20px;
         .title {
             font-size: 34px;
             br {
@@ -218,6 +218,12 @@
         }
         li {
             list-style: none;
+            img {
+                display: none;
+            }
+            span {
+                white-space: nowrap;
+            }
         }
         .container {
             text-align: center;
