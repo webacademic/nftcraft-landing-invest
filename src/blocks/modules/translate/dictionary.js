@@ -326,8 +326,23 @@ const langArr = {
         "en": "Marketer / Analyst  ",
         "ru": "Маркетолог / Аналитик"
     },
-
-
+    // Footer
+    "footer-about": {
+        "en": "NFTcraft.game is an innovative Play to Earn platform where the potential of NFTs are realized. ",
+        "ru": "NFTcraft.game — это инновационная платформа «Играй, чтобы заработать», где реализован потенциал NFT. "
+    },
+    "footer-partners": {
+        "en": "For partners and business inquiries contact ",
+        "ru": "Для партнеров и бизнес контактов "
+    },
+    "footer-invest": {
+        "en": "For investors ",
+        "ru": "Для инвесторов "
+    },
+    "footer-rights": {
+        "en": "All Rights Reserved",
+        "ru": "Все права защищены"
+    }   
 }
 
 export { langArr };
