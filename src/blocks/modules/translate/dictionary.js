@@ -16,6 +16,10 @@ const langArr = {
         "en": "Achievements",
         "ru": "Результаты"
     },
+    "menu-nct": {
+        "en": "Buy NCT",
+        "ru": "Купить NCT"
+    },
     "menu-roadmap": {
         "en": "Roadmap",
         "ru": "Roadmap"
