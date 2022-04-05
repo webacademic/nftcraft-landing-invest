@@ -108,6 +108,192 @@ const langArr = {
         "en": "Управляющий (governance) токен платформы, предназначенный для инвестиционных и управленческих целей.",
         "ru": "Управляющий (governance) токен платформы, предназначенный для инвестиционных и управленческих целей."
     },
+    // Roadmap
+    "road-done": {
+        "en": "DONE",
+        "ru": "ВЫПОЛНЕНО"
+    },
+    "road-done1": {
+        "en": "DONE",
+        "ru": "ВЫПОЛНЕНО"
+    },
+    "road-done2": {
+        "en": "DONE",
+        "ru": "ВЫПОЛНЕНО"
+    },
+    "road-done3": {
+        "en": "DONE",
+        "ru": "ВЫПОЛНЕНО"
+    },
+    "road-done4": {
+        "en": "DONE",
+        "ru": "ВЫПОЛНЕНО"
+    },
+    "road-done5": {
+        "en": "DONE",
+        "ru": "ВЫПОЛНЕНО"
+    },
+    "road-done6": {
+        "en": "DONE",
+        "ru": "ВЫПОЛНЕНО"
+    },
+    "road-done7": {
+        "en": "DONE",
+        "ru": "ВЫПОЛНЕНО"
+    },
+    "road-done8": {
+        "en": "DONE",
+        "ru": "ВЫПОЛНЕНО"
+    },"road-done9": {
+        "en": "DONE",
+        "ru": "ВЫПОЛНЕНО"
+    },
+    "road-progress": {
+        "en": "IN PROCESS",
+        "ru": "В ПРОЦЕССЕ"
+    },
+    "road-progress1": {
+        "en": "IN PROCESS",
+        "ru": "В ПРОЦЕССЕ"
+    },
+    "road-progress2": {
+        "en": "IN PROCESS",
+        "ru": "В ПРОЦЕССЕ"
+    },
+    "road-progress3": {
+        "en": "IN PROCESS",
+        "ru": "В ПРОЦЕССЕ"
+    },
+    "road-progress4": {
+        "en": "IN PROCESS",
+        "ru": "В ПРОЦЕССЕ"
+    },
+    "road-progress5": {
+        "en": "IN PROCESS",
+        "ru": "В ПРОЦЕССЕ"
+    },
+    
+    "road-progress6": {
+        "en": "IN PROCESS",
+        "ru": "В ПРОЦЕССЕ"
+    },
+    "road-soon": {
+        "en": "SOON",
+        "ru": "СКОРО"
+    },
+    "road-soon1": {
+        "en": "SOON",
+        "ru": "СКОРО"
+    },
+    "road-soon2": {
+        "en": "SOON",
+        "ru": "СКОРО"
+    },
+    "road-soon3": {
+        "en": "SOON",
+        "ru": "СКОРО"
+    },
+    "road-soon4": {
+        "en": "SOON",
+        "ru": "СКОРО"
+    },
+    "road-soon5": {
+        "en": "SOON",
+        "ru": "СКОРО"
+    },
+    "road-block-1": {
+        "en": "Alpha 2.0 <br> Game Web version",
+        "ru": "Alpha 2.0 <br> Web-версии игры"
+    },
+    "road-block-1-1": {
+        "en": "Game MVP",
+        "ru": "MVP-игры в web"
+    },
+    "road-block-1-2": {
+        "en": "Initial sales of NFT-dwarfs",
+        "ru": "Первичные продажи NFT-дварфов"
+    },
+    "road-block-1-3": {
+        "en": "Tournaments among players in web-version",
+        "ru": "Турниры среди игроков в web-версии"
+    },
+    "road-block-1-4": {
+        "en": "MVP with Unity gameplay",
+        "ru": "MVP с Unity-геймплеем"
+    },
+    "road-block-1-5": {
+        "en": "Alpha 2.0 <br> Game Web version",
+        "ru": "New web-version game design"
+    },
+    "road-block-2": {
+        "en": "Beta 1.0 <br> Game Web version",
+        "ru": "Beta 1.0 <br> Web-версии игры"
+    },
+    "road-block-2-1": {
+        "en": "Grand Tournament (beta) on blockchain",
+        "ru": "Гранд-турнир бета-версии на блокчейне"
+    },
+    "road-block-2-2": {
+        "en": "Bridge developing between blockchain and Minecraft",
+        "ru": "Разработка моста между блокчейном и Minecraft"
+    },
+    "road-block-2-3": {
+        "en": "Tournaments system in the world of Minecraft",
+        "ru": "Проведение турниров в мире Minecraft"
+    },
+    // 
+    "road-block-3": {
+        "en": "Implementation of the target economy model and tokenometrics",
+        "ru": "Внедрение целевой модели экономики и токенометрики"
+    },
+    "road-block-3-1": {
+        "en": "META.CITY prototyping in Minecraft world",
+        "ru": "Создание прототипа META.CITY в мире Minecraft"
+    },
+    "road-block-3-2": {
+        "en": "Release of NCT/RAD/cUSD tokens",
+        "ru": "Выпуск токенов NCT/RAD/cUSD"
+    },
+    "road-block-3-3": {
+        "en": "Marketplace inside the game",
+        "ru": "Маркетплейс внутри игры"
+    },
+    "road-block-3-4": {
+        "en": "Public Roundup",
+        "ru": "Паблик-раунд"
+    },
+    "road-block-3-5": {
+        "en": "International marketing campaign launch",
+        "ru": "Запуск международной рекламной кампании"
+    },
+    "road-block-3-6": {
+        "en": "METACRAFT universe in Minecraft world launch",
+        "ru": "Запуск метавселенной METACRAFT в мире Minecraft"
+    },
+    "road-block-3-7": {
+        "en": "Major release of web-version in the Polygon blockchain",
+        "ru": "Запуск основного релиза web-версии в блокчейне Polygon"
+    },
+    "road-block-3-8": {
+        "en": "Beta-version on Unity engine with blockchain integration",
+        "ru": "Запуск beta-версии на движке Unity с интеграцией с блокчейном"
+    },
+    "road-block-3-9": {
+        "en": "Platform connection with third-party Minecraft servers",
+        "ru": "Запуск платформы для подключения сторонних Minecraft-серверов"
+    },
+    "road-block-4": {
+        "en": "Expanding METACRAFT universe up to 300K users",
+        "ru": "Расширение метавселенной METACRAFT до 300K пользователей"
+    },
+    "road-block-4-1": {
+        "en": "Creating META.CITY with all the cultural attractions of the world as NFT objects",
+        "ru": "Создание META.CITY со всеми культурными достопримечательностями мира в виде NFT-объектов"
+    },
+    "road-block-4-2": {
+        "en": "Connecting the most popular AAA games to the METACRAFT.EARTH economy",
+        "ru": "Подключение наиболее популярных AAA-игр к экономике METACRAFT.EARTH"
+    },
 
 
 }
