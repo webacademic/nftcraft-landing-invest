@@ -241,7 +241,6 @@ const langArr = {
         "en": "Tournaments system in the world of Minecraft",
         "ru": "Проведение турниров в мире Minecraft"
     },
-    // 
     "road-block-3": {
         "en": "Implementation of the target economy model and tokenometrics",
         "ru": "Внедрение целевой модели экономики и токенометрики"
@@ -293,6 +292,39 @@ const langArr = {
     "road-block-4-2": {
         "en": "Connecting the most popular AAA games to the METACRAFT.EARTH economy",
         "ru": "Подключение наиболее популярных AAA-игр к экономике METACRAFT.EARTH"
+    },
+    // team
+    "team-title": {
+        "en": "Team",
+        "ru": "Команда"
+    },
+    "team-1": {
+        "en": "Сhief operating officer",
+        "ru": "Операционный директор"
+    },
+    "team-2": {
+        "en": "Project CEO",
+        "ru": "CEO проекта"
+    },
+    "team-3": {
+        "en": "Ch. Blockchain developer",
+        "ru": "Гл. Blockchain разработчик"
+    },
+    "team-4": {
+        "en": "Full stack developer",
+        "ru": "Fullstack разработчик"
+    },
+    "team-5": {
+        "en": "Art lead",
+        "ru": "Арт-лид"
+    },
+    "team-6": {
+        "en": "Game designer",
+        "ru": "Гейм-дизайнер"
+    },
+    "team-7": {
+        "en": "Marketer / Analyst  ",
+        "ru": "Маркетолог / Аналитик"
     },
 
 
