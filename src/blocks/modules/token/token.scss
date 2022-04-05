@@ -19,10 +19,12 @@
         position: relative;
         font-weight: 400;
         font-size: rem(24);
-        line-height: rem(28);
-        color: rgba(255, 255, 255, 0.8);
+        line-height: rem(28);            
         span{
             color: rgba(255, 255, 255, 1);
+            &.grey{
+                color: rgba(255, 255, 255, 0.8);
+            }
         }
         img{
             position: absolute;
@@ -48,6 +50,9 @@
         text-transform: uppercase;
         margin-bottom: rem(26);
         text-shadow: $mainShadow;
+        span.green{
+            color: #4eff10;
+        }
     }
     .exchanger {
         width: rem(288);
