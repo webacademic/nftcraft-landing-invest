@@ -3,15 +3,15 @@ header.header
     a.header__logo(href='/')
       img(src='./img/header/logo.png' alt='Logo NFT Craft')
 
-    select(data-lang-selector)
-      option(value="en" selected) EN
-      option(value="ru")  RU
+    //- select(data-lang-selector)
+    //-   option(value="en" selected) EN
+    //-   option(value="ru")  RU
 
-    .lang
-      span.en(selected) English
+    .lang(data-lang-selector lang-value="en")
+      span.en(selected data-lang-pick="en") English
       ul
         li
-          a.ru Russian
+          a.ru(data-lang-pick="ru") Russian
     nav.header__nav
       ul
         li
