@@ -1,0 +1,104 @@
+.steps {
+    padding-top: rem(180);
+    .title {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 3.4375rem;
+        line-height: 130%;
+        margin-bottom: rem(70);
+        text-shadow: 0px 0px 64px rgb(255 255 255 / 50%), 0px 0px 24px rgb(255 255 255 / 40%);
+    }
+    .list {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: rem($desktopWidth);
+        margin: 0 auto;
+        gap: 22px;
+    }
+    .step {
+        position: relative;
+        background: url("./../img/steps/step__bg.png") no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 260px;
+        max-width: 475px;
+    }
+    p {
+        &.text {
+            position: absolute;
+            right: 70px;
+            top: 8px;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 120%;
+            text-align: right;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        span {
+            display: block;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 120%;
+            text-align: right;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        &.time {
+            position: absolute;
+            bottom: 59px;
+            left: 87px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0b323a;
+            text-shadow: 0px 0px 30.7898px rgba(0, 255, 240, 0.6), 0px 0px 3.84872px rgba(0, 255, 240, 0.6);
+        }
+        &.percent {
+            position: absolute;
+            bottom: 61px;
+            right: 28px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 80%;
+            color: #00fff0;
+            text-shadow: 0px 0px 30.7898px rgba(0, 255, 240, 0.6);
+        }
+    }
+}
+
+@media (max-width: $smTableWidth) {
+    .steps {
+        padding-top: 40px;
+        .title {
+            font-size: 32px;
+        }
+        .step {
+            height: 180px;
+            max-width: 320px;
+        }
+        p {
+            &.text {
+                font-size: 17px;
+                right: 62px;
+                top: 4px;
+            }
+            span {
+                font-size: 17px;
+            }
+            &.time {
+                bottom: 38px;
+                left: 58px;
+                font-size: 14px;
+            }
+            &.percent {
+                bottom: 41px;
+                right: 8px;
+                font-size: 16px;
+            }
+        }
+    }
+}

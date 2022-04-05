@@ -1,0 +1,32 @@
+header.header
+  .container
+    a.header__logo(href='/')
+      img(src='../../../img/header/logo.png' alt='Logo NFT Craft')
+    .lang
+      span.ru Russian
+      ul
+        li
+          a.en(href='/en/') English
+    nav.header__nav
+      ul
+        li
+          a(href='https://mine.nftcraft.game') MetaCraft
+        li
+          a(href='#tokenomics') Economics
+        li
+          a(href='#achievements') Achievements
+        li.beta
+          a(href='#roadmap') Roadmap
+            i
+            i
+            i
+            i
+      .lang
+        span.en English
+        ul
+          li
+            a.ru(href='/ru/') Russian
+    input#checkbox.mobile-menu__checkbox(type='checkbox')
+    label.mobile-menu__btn(for='checkbox')
+      span.mobile-menu__icon
+    //- a.beta__mobile(href='https://app.nftcraft.game' onclick="ym(86035474,'reachGoal','RUN_DEMO_EN')") Demo
