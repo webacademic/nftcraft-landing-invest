@@ -14,12 +14,12 @@ section.token
         .exchanger
             .label Amount:
             .input 
-                input.nct(type="number", value="1000", name="nct")
+                input.nct(type="number", value="1000", name="nct", onkeyup="updateUSDTAmount()", onchange="updateUSDTAmount()")
                 span NCT
             .input
-                input(type="number", value="1000", name="ucdt")
+                input(type="number", value="1000", name="usdt", onkeyup="updateNCTAmount()", onchange="updateNCTAmount()")
                 span USDT
-            button() 
+            button(onclick="buyNCT()")
                 span coming soon
                 //- span buy nct
                 img(src='../../img/token/btn__arrow.png' alt='')
