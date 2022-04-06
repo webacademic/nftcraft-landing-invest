@@ -5,25 +5,25 @@ section.token#token
             sapn(data-lang="token-title") – УПРАВЛЯЮЩИЙ токен пРОЕКТА
         ul 
             li
-                span.grey(data-lang="token-list-1")  Общий запас:
-                span 50 000 000 NCT
-                +picture("./img/token/list-icon-1", ['png', 'webp'])
+                span.title-grey(data-lang="token-list-1")  Общий запас:
+                span 50 000 000 
+                span.green NCT
             li
-                span.grey(data-lang="token-list-2") Для покупки доступно:
-                span 2 500 000 NCT
-                +picture("./img/token/list-icon-2", ['png', 'webp'])
+                span.title-grey(data-lang="token-list-2") Для покупки доступно:
+                span 2 500 000 
+                span.green NCT
             li
-                span.grey(data-lang="token-list-3") Стоимость NCT:
-                span 0,15 USD
-                +picture("./img/token/list-icon-3", ['png', 'webp'])
+                span.title-grey(data-lang="token-list-3") Стоимость NCT:
+                span 0,15 
+                span.blue USD
         .exchanger
             .label(data-lang="token-exchange-title") Amount:
             .input 
-                input.nct(type="number", value="1000", name="nct", onkeyup="updateUSDTAmount()", onchange="updateUSDTAmount()")
-                span NCT
+                input(type="number", value="1000", name="nct", onkeyup="updateUSDTAmount()", onchange="updateUSDTAmount()")
+                span.green NCT
             .input
                 input(type="number", value="150", name="usdt", onkeyup="updateNCTAmount()", onchange="updateNCTAmount()")
-                span USDT
+                span.blue USDT
             button(onclick="buyNCT()")
                 span(data-lang="token-exchange-btn") Buy
                 //- span buy nct

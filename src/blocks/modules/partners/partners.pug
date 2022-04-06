@@ -1,0 +1,6 @@
+section.partners 
+    .container 
+        -let partnersArr = ['polygon', 'uh', 'binance', 'venus', 'defirex', 'envelop', 'certic', 'w3gcapital', 'digitalAssets', 'xxv', 'df']
+        .list
+            each val, index in partnersArr
+                +picture('./img/partners/partner-'+(index+1),  ['png', 'webp'], val)
