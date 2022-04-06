@@ -40,83 +40,84 @@
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-   > .lang {
+}
+
+.header .lang {
+    position: relative;
+    margin-left: 50px;
+    margin-right: auto;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(199, 223, 255, 0.6);
+    span {
+        cursor: default;
+        padding-right: 26px;
         position: relative;
-        margin-left: 50px;
-        margin-right: auto;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 20px;
-        color: rgba(199, 223, 255, 0.6);
-        span {
-            cursor: default;
-            padding-right: 26px;
-            position: relative;
-            &::before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-                background-size: contain !important;
-                width: 20px;
-                height: 13px;
-            }
-            &.ru {
-                &::before {
-                    background: url("./../img/header/ru.png") center center no-repeat;
-                }
-            }
-            &.en {
-                &::before {
-                    background: url("./../img/header/en.png") center center no-repeat;
-                }
-            }
-        }
-        ul {
+        &::before {
+            content: '';
             position: absolute;
-            height: 0;
-            overflow: hidden;
-            z-index: -1;
-            transition: all .3s;
-            left: 0;
-            top: 100%;
-            li {
-                cursor: pointer;
-                a {
-                    display: block;
-                    margin-top: 8px;
-                    position: relative;
-                    padding-right: 26px;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background-size: contain !important;
+            width: 20px;
+            height: 13px;
+        }
+        &.ru {
+            &::before {
+                background: url("./../img/header/ru.png") center center no-repeat;
+            }
+        }
+        &.en {
+            &::before {
+                background: url("./../img/header/en.png") center center no-repeat;
+            }
+        }
+    }
+    ul {
+        position: absolute;
+        height: 0;
+        overflow: hidden;
+        z-index: -1;
+        transition: all .3s;
+        left: 0;
+        top: 100%;
+        li {
+            cursor: pointer;
+            a {
+                display: block;
+                margin-top: 8px;
+                position: relative;
+                padding-right: 26px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    background-size: contain !important;
+                    width: 20px;
+                    height: 13px;
+                }
+                &.ru {
                     &::before {
-                        content: '';
-                        position: absolute;
-                        top: 50%;
-                        right: 0;
-                        transform: translateY(-50%);
-                        background-size: contain !important;
-                        width: 20px;
-                        height: 13px;
+                        background: url("./../img/header/ru.png") center center no-repeat;
                     }
-                    &.ru {
-                        &::before {
-                            background: url("./../img/header/ru.png") center center no-repeat;
-                        }
-                    }                    
-                    &.en {
-                        &::before {
-                            background: url("./../img/header/en.png") center center no-repeat;
-                        }
+                }                    
+                &.en {
+                    &::before {
+                        background: url("./../img/header/en.png") center center no-repeat;
                     }
                 }
             }
         }
-        &:hover {
-            ul {
-                opacity: 1;
-                z-index: 1;
-                height: 80px;
-            }
+    }
+    &:hover {
+        ul {
+            opacity: 1;
+            z-index: 1;
+            height: 80px;
         }
     }
 }
@@ -131,10 +132,6 @@
     img {
         display: none;
     }
-}
-
-.header__nav > .lang {
-    display: none;
 }
 
 .header__nav > ul {
@@ -363,10 +360,8 @@
 @media (max-width: 1200px) {
 
         .header {
-            .container {
-                >.lang {
-                    margin-left: 18px;
-                }
+            .lang {
+                margin-left: 18px;
             }
             &__nav {
                 > ul {
@@ -392,14 +387,6 @@
         &__nav {
             ul {
                 font-size: 15px;
-            }
-        }
-        .container {
-           > .lang {
-                margin-left: 12px;
-                span {
-                    padding-right: 12px;
-                }
             }
         }
     }
@@ -435,10 +422,14 @@
             //     transform: translateX(-50%);
             // }
         }
-        .container {
-           > .lang {
-                display: none;
-            }
+        .lang {
+            opacity: 0;
+            margin-left: 0;
+            position: absolute;
+            bottom: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            
         }
     }
 
@@ -455,91 +446,6 @@
         transform: translateY(-140%);
         opacity: 0;
         transition: opacity .5s linear;
-        .lang {
-            display: block;
-            position: relative;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 20px;
-            color: rgba(199, 223, 255, 0.6);
-            width: 100px;
-            text-align: center;
-            span {
-                cursor: default;
-                padding-right: 26px;
-                position: relative;
-                display: block;
-                width: 100%;
-                text-align: left;
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    right: 0;
-                    transform: translateY(-50%);
-                    background-size: contain !important;
-                    width: 20px;
-                    height: 13px;
-                }
-                &.ru {
-                    &::before {
-                        background: url("./../img/header/ru.png") center center no-repeat;
-                    }
-                }
-                &.en {
-                    &::before {
-                        background: url("./../img/header/en.png") center center no-repeat;
-                    }
-                }                
-            }
-            ul {
-                position: absolute;
-                height: 0;
-                overflow: hidden;
-                transition: height .3s;
-                left: 0;
-                width: 100%;
-                top: 100%;
-                font-size: 16px;
-                li {
-                    text-align: left;
-                    padding-top: 6px;
-                    margin-bottom: 0 !important;
-                    a {
-                        position: relative;
-                        padding-right: 26px;
-                        &::before {
-                            content: '';
-                            position: absolute;
-                            top: 50%;
-                            right: 0;
-                            transform: translateY(-50%);
-                            background-size: contain !important;
-                            width: 20px;
-                            height: 13px;
-                        }
-                        &.ru {
-                            &::before {
-                                background: url("./../img/header/ru.png") center center no-repeat;
-                            }
-                        }
-                        &.en {
-                            &::before {
-                                background: url("./../img/header/en.png") center center no-repeat;
-                            }
-                        }
-                    }
-                }
-            }
-            &:hover {
-                ul {
-                    height: 80px;
-                    
-                }
-            }
-        }
     }
 
     .header__nav ul {
@@ -602,6 +508,10 @@
             height: 80px;
             background: rgba(20, 15, 23, 0.7);
             
+        }
+        .lang {
+            opacity: 1;
+            transition: opacity 1.5s linear;
         }
     }
 
