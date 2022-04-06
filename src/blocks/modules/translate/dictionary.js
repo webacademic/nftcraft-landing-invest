@@ -205,37 +205,77 @@ const langArr = {
         "en": "Сreated prototype of METACRAFT in Minecraft world",
         "ru": "Создали прототип метавселенной METACRAFT в мире Minecraft"
     },
+    "achievements-link-1": {
+        "en": "Site",
+        "ru": "Сайт"
+    },
     "achievements-name-2": {
         "en": "Received funding of $3.7M USD",
         "ru": "Получили финансирование в размере $3,7M USD"
+    },
+    "achievements-link-2": {
+        "en": "Proof by Request",
+        "ru": "По запросу"
     },
     "achievements-name-3": {
         "en": "Regular tournaments in Minecraft 3D universe",
         "ru": "Регулярные турниры в 3D-метавселенной Minecraft"
     },
+    "achievements-link-3": {
+        "en": "Tournaments",
+        "ru": "Турниры"
+    },
     "achievements-name-4": {
         "en": "Assembled a top team of experts and developers",
         "ru": "Собрали ТОП-команду экспертов и разработчиков"
+    },
+    "achievements-link-4": {
+        "en": "Team",
+        "ru": "Команда"
     },
     "achievements-name-5": {
         "en": "Browser game on blockchain",
         "ru": "Браузерная игра на блокчейне"
     },
+    "achievements-link-5": {
+        "en": "Play",
+        "ru": "Игра"
+    },
     "achievements-name-6": {
         "en": "Sold over 1,000 NFTs and created a sustainable economy",
         "ru": "Продали более 1.000 NFT и создали устойчивую экономику"
+    },
+    "achievements-link-6": {
+        "en": "Contract",
+        "ru": "Контракт"
     },
     "achievements-name-7": {
         "en": "Multiplatform 3D game MVP on Unity",
         "ru": "MVP мультиплатформенной 3D-игры на Unity "
     },
+    "achievements-link-7": {
+        "en": "Play",
+        "ru": "Игра"
+    },
     "achievements-name-8": {
         "en": "Successfully performed presentations and mitaps, received positive feedback",
         "ru": "Провели ряд презентаций и митапов, получили положительную оценку"
     },
+    "achievements-link-8-1": {
+        "en": "Video 01.10.21",
+        "ru": "Видео 01.10.21"
+    },
+    "achievements-link-8-2": {
+        "en": "Video 22.02.22",
+        "ru": "Видео 22.02.22"
+    },
     "achievements-name-9": {
         "en": "Released of Governance-token NCT",
         "ru": "Выпуск Governance-токена NCT"
+    },
+    "achievements-link-9": {
+        "en": "Contract",
+        "ru": "Контракт"
     },
     "achievements-name-10": {
         "en": "Partnerships with large funds and strong partners",
@@ -263,12 +303,12 @@ const langArr = {
         "ru": ">10 крупных партнеров OwnFund, Envelop, Venus etc."
     },
     "numbers-item-label-3": {
-        "en": "Инвестиции:",
-        "ru": "Marketing company:"
+        "en": "Team:",
+        "ru": "Команда:"
     },
     "numbers-item-descr-3": {
-        "en": "500K USDT monthly from 05.2022",
-        "ru": "500K USDT ежемесячно с 05.2022"
+        "en": " 35 people",
+        "ru": " 35 человек"
     },
     "numbers-item-label-4": {
         "en": "GOAL:",
@@ -279,12 +319,12 @@ const langArr = {
         "ru": ">300K пользователей в 4Q.2022"
     },
     "numbers-item-label-5": {
-        "en": "Team:",
-        "ru": "Команда:"
+        "en": "Marketing company:",
+        "ru": "Инвестиции:"
     },
     "numbers-item-descr-5": {
-        "en": "35 people",
-        "ru": "35 человек"
+        "en": "500K USDT monthly from 05.2022",
+        "ru": "500K USDT ежемесячно с 05.2022"
     },
     "numbers-item-label-6": {
         "en": "Community:",
@@ -299,8 +339,8 @@ const langArr = {
         "ru": "Игровые ивенты:"
     },
     "numbers-item-descr-7": {
-        "en": "Held >20 events PvE / Build / 2D",
-        "ru": "проведено >20 ивентов PvE / Стройка / 2D"
+        "en": "Held >20 events <br> PvE / Build / 2D",
+        "ru": "проведено >20 ивентов <br> PvE / Стройка / 2D"
     },
     "numbers-item-label-8": {
         "en": "Investments:",
@@ -504,29 +544,57 @@ const langArr = {
         "en": "Сhief operating officer",
         "ru": "Операционный директор"
     },
+    "team-name-1": {
+        "en": "Constantine Beovulf",
+        "ru": "Константин Беовульф"
+    },
     "team-2": {
         "en": "Project CEO",
         "ru": "CEO проекта"
+    },
+    "team-name-2": {
+        "en": "Roman Odin",
+        "ru": "Роман Один"
     },
     "team-3": {
         "en": "Ch. Blockchain developer",
         "ru": "Гл. Blockchain разработчик"
     },
+    "team-name-3": {
+        "en": "Andrei Thor",
+        "ru": "Андрей Тор"
+    },
     "team-4": {
         "en": "Full stack developer",
         "ru": "Fullstack разработчик"
+    },
+    "team-name-4": {
+        "en": "Dmitry Ragnwow",
+        "ru": "Дмитрий Рэгнволд"
     },
     "team-5": {
         "en": "Art lead",
         "ru": "Арт-лид"
     },
+    "team-name-5": {
+        "en": "Stanislav Clement",
+        "ru": "Станислав Клемент"
+    },
     "team-6": {
         "en": "Game designer",
         "ru": "Гейм-дизайнер"
     },
+    "team-name-6": {
+        "en": "Alkhan Eyik",
+        "ru": "Алхан Эйрик"
+    },
     "team-7": {
         "en": "Marketer / Analyst  ",
         "ru": "Маркетолог / Аналитик"
+    },
+    "team-name-7": {
+        "en": "Sergey Kyarwal",
+        "ru": "Сергей Кьярваль"
     },
     // Footer
     "footer-about": {
