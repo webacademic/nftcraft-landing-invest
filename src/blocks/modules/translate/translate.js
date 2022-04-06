@@ -17,11 +17,19 @@ observer.observe(langSelect, {attributes:true});
 langListItems.forEach(item => {
     item.addEventListener('click', (e) => {
         const target = e.target;
+        const links = item.querySelector('a');
+        const lang = window.location.hash.substring(1);
 
         selectedLang.className = '';
         selectedLang.classList.add(target.className)
         selectedLang.textContent = target.textContent
         langSelect.setAttribute("lang-value", target.getAttribute('data-lang-pick'));
+
+        if(!links.classList.contains(lang)) {
+            selectedLang.textContent = item.textContent;
+            item.remove();
+            return
+        }
     })
 })
 
