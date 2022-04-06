@@ -22,10 +22,10 @@ section.token#token
                 input.nct(type="number", value="1000", name="nct", onkeyup="updateUSDTAmount()", onchange="updateUSDTAmount()")
                 span NCT
             .input
-                input(type="number", value="1000", name="usdt", onkeyup="updateNCTAmount()", onchange="updateNCTAmount()")
+                input(type="number", value="150", name="usdt", onkeyup="updateNCTAmount()", onchange="updateNCTAmount()")
                 span USDT
             button(onclick="buyNCT()")
-                span(data-lang="token-exchange-btn") coming soon
+                span(data-lang="token-exchange-btn") Buy
                 //- span buy nct
                 +picture("./img/token/btn__arrow", ['png', 'webp'])
         .img

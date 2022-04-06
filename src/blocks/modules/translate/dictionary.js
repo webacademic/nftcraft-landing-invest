@@ -55,8 +55,8 @@ const langArr = {
         "ru": "Cумма денег: "
     },
     "token-exchange-btn": {
-        "en": "coming soon ",
-        "ru": "скоро "
+        "en": "Buy ",
+        "ru": "купить "
     },
     // Step
     "step-title ": {
