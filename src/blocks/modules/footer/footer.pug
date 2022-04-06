@@ -11,6 +11,5 @@ footer
         -let links = ['t.me/NFTcraftRU', 't.me/NFTcraftEN', 'medium.com/@NFTcraft', 'discord.gg/RqepYZWpk6', 'twitter.com/NFTcraft_game']
         each val, index in links
             a(href="http://"+(val), target="_blank", rel="noopener noreferrer")  
-                img(src='./img/footer/link-'+(index+1)+'.png',  val, alt="")                   
-                //- +image('footer/link-'+(index+1),  val)
+                +picture('./img/footer/link-'+(index+1), ['png', 'webp'])
     .rights(data-lang="footer-rights") All Rights Reserved

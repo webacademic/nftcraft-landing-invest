@@ -1,0 +1,5 @@
+mixin picture(path, type, about="image")
+    picture 
+        each val in type 
+            source(src=path+ "."+val, type=val)
+        img(src=path+ "." +type[0], alt=about)
