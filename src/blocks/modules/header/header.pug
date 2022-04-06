@@ -3,19 +3,17 @@ header.header
     a.header__logo(href='/')
       img(src='./img/header/logo.png' alt='Logo NFT Craft')
 
-    //- select(data-lang-selector)
-    //-   option(value="en" selected) EN
-    //-   option(value="ru")  RU
-
     .lang(data-lang-selector lang-value="en")
-      span.en(selected data-lang-pick="en") English
-      ul
-        li
+      span.lang-selected
+      ul.lang-list
+        li.lang-list__item
           a.ru(data-lang-pick="ru") Russian
+        li.lang-list__item
+          a.en(data-lang-pick="en") English
     nav.header__nav
       ul
-        li
-          a(href='https://mine.nftcraft.game' data-lang="menu-metaCraft") MetaCraft
+        //- li
+        //-   a(href='https://mine.nftcraft.game' data-lang="menu-metaCraft") MetaCraft
         li
           a(href='#tokenomics' data-lang="menu-economics") Economics
         li

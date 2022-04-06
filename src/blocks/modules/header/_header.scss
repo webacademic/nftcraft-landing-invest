@@ -78,14 +78,14 @@
             height: 0;
             overflow: hidden;
             z-index: -1;
-            
             transition: all .3s;
             left: 0;
             top: 100%;
             li {
-                padding-top: 8px;
                 cursor: pointer;
                 a {
+                    display: block;
+                    margin-top: 8px;
                     position: relative;
                     padding-right: 26px;
                     &::before {
@@ -570,7 +570,7 @@
         margin-bottom: 12px;
     }
     .header__nav > ul li:last-child {
-        display: none;
+        margin-bottom: 30px;
     }
 
     .header__nav ul li.beta a {

@@ -1,11 +1,11 @@
 import { langArr } from "./dictionary";
 
-// data-lang-selector - select , data-lang="x" x - key for translate)
 let langSelect = document.querySelector("[data-lang-selector]"); 
-let langPickEn = document.querySelector("[data-lang-pick='en']");
-let langPickRu = document.querySelector("[data-lang-pick='ru']");
 let allLang = ["en", "ru"];
 let defLang = "#en";
+
+const selectedLang = document.querySelector('.lang-selected'),
+    langListItems = document.querySelectorAll('.lang-list__item')
 
 let observer = new MutationObserver(mutationRecords => {
     if (mutationRecords[0].attributeName === 'lang-value'){
@@ -14,17 +14,20 @@ let observer = new MutationObserver(mutationRecords => {
   });
 observer.observe(langSelect, {attributes:true});
 
-// langSelectAttr.addEventListener("change", changeUrlLang);
-langPickEn.addEventListener("click", langSelectToggle);
-langPickRu.addEventListener("click", langSelectToggle);
+langListItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+        const target = e.target;
+
+        selectedLang.className = '';
+        selectedLang.classList.add(target.className)
+        selectedLang.textContent = target.textContent
+        langSelect.setAttribute("lang-value", target.getAttribute('data-lang-pick'));
+    })
+})
 
 function changeUrlLang() {
     location.href = window.location.pathname + "#" + langSelect.getAttribute('lang-value');
     location.reload();
-}
-
-function langSelectToggle(e) {
-    langSelect.setAttribute("lang-value", e.srcElement.getAttribute('data-lang-pick'));
 }
 
 function changeLang() {
@@ -43,4 +46,21 @@ function changeLang() {
     }
 }
 
+const selectLang = () => {
+    let lang = window.location.hash.substring(1);
+    
+    selectedLang.className = '';
+    selectedLang.classList.add(lang);
+
+    langListItems.forEach(item => {
+        const links = item.querySelector('a')
+        if(links.classList.contains(lang)) {
+            selectedLang.textContent = item.textContent;
+            item.remove();
+            return
+        }
+    })
+}
+
 changeLang();
+selectLang();
