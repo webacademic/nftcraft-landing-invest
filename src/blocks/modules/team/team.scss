@@ -18,6 +18,9 @@
         max-width: rem($desktopWidth);
         margin: 0 auto;
         gap: 42px;
+        img{
+            width: 100%;
+        }
     }
     .member {
         display: flex;

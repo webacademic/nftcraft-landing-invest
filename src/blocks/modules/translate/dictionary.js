@@ -277,6 +277,10 @@ const langArr = {
         "en": "Contract",
         "ru": "Контракт"
     },
+    "achievements-link-10": {
+        "en": "Partners",
+        "ru": "Партнеры"
+    },
     "achievements-name-10": {
         "en": "Partnerships with large funds and strong partners",
         "ru": "Заключили партнерства с крупными фондами и сильными партнерами"
