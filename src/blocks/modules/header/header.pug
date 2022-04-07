@@ -5,28 +5,40 @@ header.header
 
     .lang(data-lang-selector lang-value="en")
       span.lang-selected
+      +picture('./img/header/lang_arrow', ['png', 'webp'], 'Logo NFT Craft')
       ul.lang-list
         li.lang-list__item
-          a.ru(data-lang-pick="ru") Russian
+          a.ru(data-lang-pick="ru") RUS
         li.lang-list__item
-          a.en(data-lang-pick="en") English
+          a.en(data-lang-pick="en") ENG
     nav.header__nav
       ul
-        //- li
-        //-   a(href='https://mine.nftcraft.game' data-lang="menu-metaCraft") MetaCraft
+        li
+          a(href='https://mine.nftcraft.game' data-lang="menu-metaCraft") MetaCraft
         li
           a(href='#tokenomics' data-lang="menu-economics") Economics
         li
           a(href='#achievements' data-lang="menu-achievements") Achievements
         li 
           a(href="#roadmap" data-lang="menu-roadmap") Roadmap 
-        li.beta
-          a(href='#token')             
-            i
-            i
-            i
-            i
-            p(data-lang="menu-nct")
+        //- li.beta
+        //-   a(href='#token')             
+        //-     i
+        //-     i
+        //-     i
+        //-     i
+        //-     p(data-lang="menu-nct")        
+        button.login.user.off
+          +picture('./img/header/login', ['png', 'webp'], 'metamask')
+          span(data-lang="menu-metamask-btn") Connect wallet
+        .user.user__info 
+          .balance
+            +picture('./img/header/add-token', ['png', 'webp'], 'logout')
+            span.green NCT:
+            span 411 512
+          .logout 
+            .number 0x37F...5E1dввоа
+            +picture('./img/header/logout', ['png', 'webp'], 'logout')
     input#checkbox.mobile-menu__checkbox(type='checkbox')
     label.mobile-menu__btn(for='checkbox')
       span.mobile-menu__icon

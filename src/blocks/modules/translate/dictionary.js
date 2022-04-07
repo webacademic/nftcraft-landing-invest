@@ -24,6 +24,10 @@ const langArr = {
         "en": "Roadmap",
         "ru": "Roadmap"
     }, 
+    "menu-metamask-btn": {
+        "en": "Connect wallet",
+        "ru": "Подключить"
+    },     
     // main
     "main-label-1 ": {
         "en": " BUY ",
