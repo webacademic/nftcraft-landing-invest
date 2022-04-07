@@ -210,8 +210,8 @@ const langArr = {
         "ru": "Создали прототип метавселенной METACRAFT в мире Minecraft"
     },
     "achievements-link-1": {
-        "en": "Site",
-        "ru": "Сайт"
+        "en": "Coming soon",
+        "ru": "Скоро будет"
     },
     "achievements-name-2": {
         "en": "Received funding of $3.7M USD",
@@ -307,7 +307,7 @@ const langArr = {
         "ru": "Партнеры:"
     },
     "numbers-item-descr-2": {
-        "en": ">10 major partners OwnFund, Envelop, Venus etc.",
+        "en": ">10 major partners OwnFund, <br> Envelop, Venus etc.",
         "ru": ">10 крупных партнеров OwnFund, Envelop, Venus etc."
     },
     "numbers-item-label-3": {
@@ -328,7 +328,7 @@ const langArr = {
     },
     "numbers-item-label-5": {
         "en": "Marketing company:",
-        "ru": "Инвестиции:"
+        "ru": "Инвестиции в маркетинг:"
     },
     "numbers-item-descr-5": {
         "en": "500K USDT monthly from 05.2022",
@@ -597,12 +597,32 @@ const langArr = {
         "ru": "Алхан Эйрик"
     },
     "team-7": {
-        "en": "Marketer / Analyst  ",
+        "en": "Marketer / Analyst",
         "ru": "Маркетолог / Аналитик"
     },
     "team-name-7": {
         "en": "Sergey Kyarwal",
         "ru": "Сергей Кьярваль"
+    },
+    "team-8": {
+        "en": "Business assistant",
+        "ru": "Бизнес ассистент"
+    },
+    "team-name-8": {
+        "en": "Arina Valborg",
+        "ru": "Арина Валборг"
+    },
+    "team-9": {
+        "en": "Community Lead",
+        "ru": "Коммьюнити Лид"
+    },
+    "team-name-9": {
+        "en": "Nikolay Asbrandt",
+        "ru": "Николай Асбранд"
+    },
+    "partners-title": {
+        "en": "Partners",
+        "ru": "Партнеры"
     },
     // Footer
     "footer-about": {

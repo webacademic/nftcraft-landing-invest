@@ -1,11 +1,22 @@
 .partners {
     padding-bottom: rem(124);
-}
-.list {
-    display: flex;
-    justify-content: center;
-    flex-flow: wrap;
-    img {
-        width: rem(331);
+    .title {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 3.4375rem;
+        line-height: 130%;
+        margin-bottom: 3.5rem;
+        text-shadow: 0px 0px 64px rgb(255 255 255 / 50%), 0px 0px 24px rgb(255 255 255 / 40%),
+            0px 0px 4px rgb(255 255 255 / 60%);
+    }
+    .list {
+        display: flex;
+        justify-content: center;
+        flex-flow: wrap;
+        img {
+            width: rem(331);
+        }
     }
 }
+
