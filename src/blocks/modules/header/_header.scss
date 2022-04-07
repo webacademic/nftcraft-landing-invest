@@ -197,7 +197,7 @@
                 //         background: url("./../img/header/en.png") center center no-repeat;
                 //     }
                 // }
-            }
+            }            
         }
     }
     &:hover {
@@ -219,6 +219,24 @@
     // img {
     //     display: none;
     // }
+}
+
+.list{
+    position: relative;
+    .dropdown-list{
+        display: none;
+    }
+    &:hover{
+        .dropdown-list{
+            display: block;
+            position: absolute;
+            top: 20;
+            left: -20px;
+            background: rgba(20, 15, 23, 0.8);
+            border-radius: 0 0 5px 5px;
+            padding: 10px 20px;
+        }
+    }
 }
 
 .header__nav {
@@ -498,6 +516,15 @@
         &__nav {
             ul {
                 font-size: 15px;
+            }
+        }
+    }
+    .list{
+        &:hover{
+            .dropdown-list{
+                background: rgba(20, 15, 23, 1);
+                z-index: 1;
+                width: 152%;
             }
         }
     }
