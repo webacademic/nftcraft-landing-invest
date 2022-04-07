@@ -45,9 +45,30 @@ window.addTokenToMetaMask = async function () {
     }});
 }
 
+async function switchToPolygonChain() {
+    const chain_id = (await web3.eth.getChainId()) * 1;
+    if (chain_id !== 137) {
+        const params = [ {
+            chainId: '0x89',
+                chainName: 'Matic Mainnet',
+                nativeCurrency: {
+                name: 'MATIC',
+                    symbol: 'MATIC',
+                    decimals: 18
+            },
+            rpcUrls: ['https://polygon-rpc.com/'],
+                blockExplorerUrls: ['https://polygonscan.com/']
+        }];
+        await window.ethereum.request({ method: 'wallet_addEthereumChain', params });
+    }
+}
+
 window.connectWallet = async function() {
     if (typeof window['ethereum'] !== 'undefined') {
         web3 = new Web3(Web3.givenProvider);
+
+        await switchToPolygonChain();
+
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         const walletAddress = accounts[0].toLowerCase();
         document.querySelector('.userAddress').innerHTML = walletAddress.substr(0, 4) + '...' + walletAddress.substr(walletAddress.length-4);
@@ -120,6 +141,10 @@ if (window.ethereum) {
         if (accounts.length > 0) {
             window.connectWallet();
         }
+    });
+
+    window.ethereum.on('chainChanged', (_chainId) => {
+        window.location.reload();
     });
 }
 
