@@ -2,5 +2,5 @@
 mixin picture(path, type, about="image")
     picture 
         each val in type.reverse() 
-            source(src=path+ "."+val, type=val)
+            source(src=path+ "."+val, type="image/" + val)
         img(src=path+ "." +type[1], alt=about)
