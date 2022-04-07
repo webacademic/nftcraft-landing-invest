@@ -1,7 +1,8 @@
 import "./import/modules";
 import "./import/components";
+import Web3 from "./import/web3.min"
 
-const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
+let web3;
 
 const USDT_ADDRESS = "0xc2132D05D31c914a87C6611C10748AEb04B58e8F";
 const NCT_SELL_ADDRESS = "0x0a543229696054f8bf7e3113b284aea5807e12dd";
@@ -33,50 +34,82 @@ function hex(n) {
     return '0x' + n.toString(16);
 }
 
+window.connectWallet = async function() {
+    if (typeof window['ethereum'] !== 'undefined') {
+        web3 = new Web3(window['ethereum']);
+        window['ethereum'].request({method: "eth_requestAccounts"}).then(
+            () => {
+                web3.eth.getAccounts().then(
+                    async (accounts) => {
+                        if (accounts.length > 0) {
+                            walletAddress = accounts[0].toLowerCase();
+
+                            const nctSell = new web3.eth.Contract(ABI_SELLER, NCT_SELL_ADDRESS);
+                            const nctAmount = (await nctSell.methods.balanceOf(accounts[0]).call()) * 1;
+                        }
+                    }
+                ).catch((message) => {
+                    console.log(message);
+                    alert(message);
+                });
+            }
+        ).catch((message) => {
+            console.log(message);
+            alert(message);
+        });
+    }
+}
+
 window.buyNCT = async function() {
     await updateUSDTAmount();
-
-    const nctSell = new web3.eth.Contract(ABI_SELLER, NCT_SELL_ADDRESS);
-    // const requiredUSDTAmount = Math.round(document.querySelector('input[name="usdt"]').value * 1e6);
-    const requiredNCTAmount = Math.floor(round(document.querySelector('input[name="nct"]').value, 2) * 1e18);
-    const requiredUSDTAmount = (await nctSell.methods.getAmounts( hex(requiredNCTAmount)).call()) * 1;
-    document.querySelector('input[name="usdt"]').value = round(requiredUSDTAmount/1e6 , 2);
-    console.log("requiredUSDTAmount", requiredUSDTAmount);
-
-    const usdt = new web3.eth.Contract(ABI_TOKEN, USDT_ADDRESS);
-    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-    const userUSDTAmount = (await usdt.methods.balanceOf(accounts[0]).call()) * 1;
-    if (userUSDTAmount < requiredUSDTAmount) {
-        alert(`Not enough USDT on ${accounts[0]} wallet! You have ${round(userUSDTAmount / 1e6, 2)}, required ${round(requiredUSDTAmount / 1e6, 2)}`);
+    if (web3 === null){
         return;
     }
-    const approvedAmount = await usdt.methods.allowance(accounts[0], NCT_SELL_ADDRESS).call();
-    console.log("approvedAmount", approvedAmount);
-    console.log("requiredUSDTAmount", requiredUSDTAmount);
-    if  (approvedAmount < requiredUSDTAmount) {
-
-        await new Promise((success) => {
-            usdt.methods.approve(NCT_SELL_ADDRESS, requiredUSDTAmount).send({from: accounts[0]}).on('transactionHash', async function (hash) {
-                await new Promise((success) => {
-                    nctSell.methods.swap(hex(requiredNCTAmount)).send({from: accounts[0], gas: gasMaxForSwap}).on('transactionHash', function (hash) {
-                        //
-                    }).on('receipt', function (receipt) {
-                        success();
+    else{
+        const nctSell = new web3.eth.Contract(ABI_SELLER, NCT_SELL_ADDRESS);
+        // const requiredUSDTAmount = Math.round(document.querySelector('input[name="usdt"]').value * 1e6);
+        const requiredNCTAmount = Math.floor(round(document.querySelector('input[name="nct"]').value, 2) * 1e18);
+        const requiredUSDTAmount = (await nctSell.methods.getAmounts( hex(requiredNCTAmount)).call()) * 1;
+        document.querySelector('input[name="usdt"]').value = round(requiredUSDTAmount/1e6 , 2);
+        console.log("requiredUSDTAmount", requiredUSDTAmount);
+    
+        const usdt = new web3.eth.Contract(ABI_TOKEN, USDT_ADDRESS);
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        const userUSDTAmount = (await usdt.methods.balanceOf(accounts[0]).call()) * 1;
+        if (userUSDTAmount < requiredUSDTAmount) {
+            alert(`Not enough USDT on ${accounts[0]} wallet! You have ${round(userUSDTAmount / 1e6, 2)}, required ${round(requiredUSDTAmount / 1e6, 2)}`);
+            return;
+        }
+        const approvedAmount = await usdt.methods.allowance(accounts[0], NCT_SELL_ADDRESS).call();
+        console.log("approvedAmount", approvedAmount);
+        console.log("requiredUSDTAmount", requiredUSDTAmount);
+        if  (approvedAmount < requiredUSDTAmount) {
+    
+            await new Promise((success) => {
+                usdt.methods.approve(NCT_SELL_ADDRESS, requiredUSDTAmount).send({from: accounts[0]}).on('transactionHash', async function (hash) {
+                    await new Promise((success) => {
+                        nctSell.methods.swap(hex(requiredNCTAmount)).send({from: accounts[0], gas: gasMaxForSwap}).on('transactionHash', function (hash) {
+                            //
+                        }).on('receipt', function (receipt) {
+                            success();
+                        });
                     });
+                }).on('receipt', function (receipt) {
+                    success();
                 });
-            }).on('receipt', function (receipt) {
-                success();
             });
-        });
-    } else {
-        await new Promise((success) => {
-            nctSell.methods.swap(hex(requiredNCTAmount)).send({from: accounts[0], gas: gasMaxForSwap}).on('transactionHash', function (hash) {
-                //
-            }).on('receipt', function (receipt) {
-                success();
+        } else {
+            await new Promise((success) => {
+                nctSell.methods.swap(hex(requiredNCTAmount)).send({from: accounts[0], gas: gasMaxForSwap}).on('transactionHash', function (hash) {
+                    //
+                }).on('receipt', function (receipt) {
+                    success();
+                });
             });
-        });
+        }
     }
+
+    
 
     // let gas;
     // try
