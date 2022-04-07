@@ -1,5 +1,6 @@
+//- first imgae for img, last for first source(webp)
 mixin picture(path, type, about="image")
     picture 
-        each val in type 
+        each val in type.reverse() 
             source(src=path+ "."+val, type=val)
-        img(src=path+ "." +type[0], alt=about)
+        img(src=path+ "." +type[1], alt=about)
