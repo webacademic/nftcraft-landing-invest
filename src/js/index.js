@@ -1,6 +1,7 @@
 import "./import/modules";
 import "./import/components";
 import Web3 from "./import/web3.min"
+window.Web3 = Web3;
 
 let web3;
 
@@ -27,45 +28,49 @@ window.updateNCTAmount = async function() {
     document.querySelector('input[name="nct"]').value = round(amountUSDT , 2);
 }
 
-async function getGasPrice() {
-    return await web3.eth.getGasPrice();
-}
 function hex(n) {
     return '0x' + n.toString(16);
 }
 
+window.addTokenToMetaMask = async function () {
+    await ethereum.request({method: "wallet_watchAsset",
+        params: {
+        type: 'ERC20',
+            options: {
+                address: NCT_ADDRESS,
+                symbol: 'NCT',
+                decimals: 18,
+                image: 'https://foo.io/token-image.svg',
+        }
+    }});
+}
+
 window.connectWallet = async function() {
     if (typeof window['ethereum'] !== 'undefined') {
-        web3 = new Web3(window['ethereum']);
-        window['ethereum'].request({method: "eth_requestAccounts"}).then(
-            () => {
-                web3.eth.getAccounts().then(
-                    async (accounts) => {
-                        if (accounts.length > 0) {
-                            walletAddress = accounts[0].toLowerCase();
-
-                            const nctSell = new web3.eth.Contract(ABI_SELLER, NCT_SELL_ADDRESS);
-                            const nctAmount = (await nctSell.methods.balanceOf(accounts[0]).call()) * 1;
-                        }
-                    }
-                ).catch((message) => {
-                    console.log(message);
-                    alert(message);
-                });
-            }
-        ).catch((message) => {
-            console.log(message);
-            alert(message);
-        });
+        web3 = new Web3(Web3.givenProvider);
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        const walletAddress = accounts[0].toLowerCase();
+        document.querySelector('.userAddress').innerHTML = walletAddress.substr(0, 4) + '...' + walletAddress.substr(walletAddress.length-4);
+        const nctToken = new web3.eth.Contract(ABI_TOKEN, NCT_ADDRESS);
+        const nctAmount = (await nctToken.methods.balanceOf(accounts[0]).call()) * 1;
+        document.querySelector('.userBalance').innerHTML = round(nctAmount / 1e18, 2);
+        document.querySelector('button.login').classList.add("off");
+        document.querySelector('.user.user__info').classList.remove("off");
     }
 }
 
+window.logout = function() {
+    document.querySelector('button.login').classList.remove("off");
+    document.querySelector('.user.user__info').classList.add("off");
+}
+
 window.buyNCT = async function() {
+    await connectWallet();
     await updateUSDTAmount();
     if (web3 === null){
         return;
     }
-    else{
+    else {
         const nctSell = new web3.eth.Contract(ABI_SELLER, NCT_SELL_ADDRESS);
         // const requiredUSDTAmount = Math.round(document.querySelector('input[name="usdt"]').value * 1e6);
         const requiredNCTAmount = Math.floor(round(document.querySelector('input[name="nct"]').value, 2) * 1e18);
@@ -108,19 +113,13 @@ window.buyNCT = async function() {
             });
         }
     }
+}
 
-    
-
-    // let gas;
-    // try
-    // {
-    //     gas = await nctSell.methods.swap(hex(requiredNCTAmount)).estimateGas({from: accounts[0]});
-    // }catch (e) {
-    //     console.error(e);
-    //     alert("Transaction will fail");
-    //     return;
-    // }
-
-
+if (window.ethereum) {
+    window.ethereum.on('accountsChanged', function (accounts) {
+        if (accounts.length > 0) {
+            window.connectWallet();
+        }
+    });
 }
 

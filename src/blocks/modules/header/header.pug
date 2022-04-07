@@ -28,17 +28,19 @@ header.header
         //-     i
         //-     i
         //-     p(data-lang="menu-nct")        
-        button.login.user.off
+        button.login.user(onclick="connectWallet()")
           +picture('./img/header/login', ['png', 'webp'], 'metamask')
           span(data-lang="menu-metamask-btn") Connect wallet
-        .user.user__info 
+        .user.user__info.off
           .balance
-            +picture('./img/header/add-token', ['png', 'webp'], 'logout')
+            span(onclick="addTokenToMetaMask()")
+                +picture('./img/header/add-token', ['png', 'webp'], 'logout')
             span.green NCT:
-            span 411 512
-          .logout 
-            .number 0x37F...5E1dввоа
-            +picture('./img/header/logout', ['png', 'webp'], 'logout')
+            span.userBalance 411 512
+          .logout
+            .number.userAddress 0x37F...5E1dввоа
+            span(onclick="logout()")
+                +picture('./img/header/logout', ['png', 'webp'], 'logout')
     input#checkbox.mobile-menu__checkbox(type='checkbox')
     label.mobile-menu__btn(for='checkbox')
       span.mobile-menu__icon
