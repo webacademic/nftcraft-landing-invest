@@ -234,7 +234,7 @@
         opacity: 0;
         visibility: hidden;
         z-index: -100;
-        transition: all 0.5s ease-in;
+        transition: opacity,visibility 0.5s ease-in;
     }
     &:hover {
         .dropdown-list {
@@ -527,6 +527,11 @@
         }
     }
     .list {
+        picture{
+            img{
+                margin-bottom: 2px;
+            }
+        }
         &:hover {
             .dropdown-list {
                 background: rgba(20, 15, 23, 1);
