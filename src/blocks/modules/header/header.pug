@@ -5,7 +5,7 @@ header.header
 
     .lang(data-lang-selector lang-value="en")
       span.lang-selected
-      +picture('./img/header/lang_arrow', ['png', 'webp'], 'Logo NFT Craft')
+      +picture('./img/header/lang_arrow', ['png', 'webp'], 'arrow')
       ul.lang-list
         li.lang-list__item
           a.ru(data-lang-pick="ru") RUS
@@ -13,7 +13,8 @@ header.header
           a.en(data-lang-pick="en") ENG
     nav.header__nav
       ul
-        li.list MetaCraft           
+        li.list MetaCraft  
+          +picture('./img/header/lang_arrow', ['png', 'webp'], 'arrow')         
           ul.dropdown-list 
             li 
               a(href='https://dev.dwarfworld.ru/ru', target="_blank", rel="noopener noreferrer") Minecraft
