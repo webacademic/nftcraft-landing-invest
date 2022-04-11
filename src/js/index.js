@@ -118,7 +118,11 @@ window.connectWallet = async function () {
     const nctToken = new web3.eth.Contract(ABI_TOKEN, NCT_ADDRESS);
     const nctAmount =
       (await nctToken.methods.balanceOf(accounts[0]).call()) * 1;
-    document.querySelector(".userBalance").innerHTML = round(
+    document.querySelectorAll(".userBalance")[0].innerHTML = round(
+      nctAmount / 1e18,
+      2
+    );
+    document.querySelectorAll(".userBalance")[1].innerHTML = round(
       nctAmount / 1e18,
       2
     );
@@ -131,8 +135,11 @@ window.connectWallet = async function () {
 };
 
 window.logout = function () {
-  document.querySelector("button.login").classList.remove("off");
-  document.querySelector(".user.user__info").classList.add("off");
+  document.querySelectorAll("button.login")[0].classList.remove("off");
+  document.querySelectorAll(".user.user__info")[0].classList.add("off");
+
+   document.querySelectorAll("button.login")[1].classList.remove("off");
+  document.querySelectorAll(".user.user__info")[1].classList.add("off");
 };
 
 window.buyNCT = async function () {
