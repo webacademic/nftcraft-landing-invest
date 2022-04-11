@@ -58,6 +58,10 @@ const langArr = {
         "en": "Amount: ",
         "ru": "Cумма денег: "
     },
+    "token-exchange-hint": {
+        "en": "Min 7500 USDT",
+        "ru": "Мин. 7500 USDT "
+    },
     "token-exchange-btn": {
         "en": "Buy ",
         "ru": "купить "
