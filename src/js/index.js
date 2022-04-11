@@ -91,6 +91,16 @@ async function switchToPolygonChain() {
   }
 }
 
+let conectWalletBtns = document.querySelectorAll('.button_play .login.user');
+
+conectWalletBtns.forEach(btn => {
+   btn.addEventListener('click', function(){
+      console.log(this);
+      this.classList.add("off");
+      this.parentElement.querySelector(".button_play .user.user__info").classList.remove("off");
+   } );
+});
+
 window.connectWallet = async function () {
   if (typeof window["ethereum"] !== "undefined") {
     web3 = new Web3(Web3.givenProvider);
@@ -112,8 +122,8 @@ window.connectWallet = async function () {
       nctAmount / 1e18,
       2
     );
-    document.querySelector("button.login").classList.add("off");
-    document.querySelector(".user.user__info").classList.remove("off");
+    // document.querySelector(".button_play .login.user").classList.add("off");
+    // document.querySelector(".button_play .user.user__info").classList.remove("off");
   }
   else{
       alert('Your browser dont support Metamask, pls use browser supported browser ( Chrome, Firefox, Brave, Edge)')
