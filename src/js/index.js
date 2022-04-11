@@ -19,13 +19,30 @@ function round(n, p) {
 }
 
 window.updateUSDTAmount = async function() {
-    const amountUSDT =  document.querySelector('input[name="nct"]').value * price;
-    document.querySelector('input[name="usdt"]').value = round(amountUSDT , 2);
+    const amount =  document.querySelector('input[name="nct"]').value * price;
+    const min = document.querySelector('input[name="nct"]').min;
+    if (amount < min){
+        document.querySelector('input[name="usdt"]').value = document.querySelector('input[name="usdt"]').min;
+        document.querySelector('.exchanger button').disabled = true;
+    }
+    else{
+        document.querySelector('input[name="usdt"]').value = round(amount , 2);
+        document.querySelector('.exchanger button').disabled = false;
+    }
 }
 
 window.updateNCTAmount = async function() {
-    const amountUSDT =  document.querySelector('input[name="usdt"]').value / price;
-    document.querySelector('input[name="nct"]').value = round(amountUSDT , 2);
+    const amount =  document.querySelector('input[name="usdt"]').value / price;
+    const min = document.querySelector('input[name="usdt"]').min;
+    document.querySelector('input[name="nct"]').value = round(amount , 2);
+    if (amount < min){
+        document.querySelector('input[name="nct"]').value = document.querySelector('input[name="nct"]').min;
+        document.querySelector('.exchanger button').disabled = true;
+    }
+    else{
+        document.querySelector('input[name="nct"]').value = round(amount , 2);
+        document.querySelector('.exchanger button').disabled = false;
+    }    
 }
 
 function hex(n) {
