@@ -4,8 +4,7 @@ footer {
     align-items: center;
     background: rgba(0, 0, 0, 0.4);
     padding: rem(48) rem(10);
-}
-.text {
+    .text {
     p {
         font-weight: 400;
         font-size: rem(16);
@@ -37,4 +36,6 @@ footer {
     line-height: rem(19);
     color: #ffffff;
     opacity: 0.3;
+}
+
 }
