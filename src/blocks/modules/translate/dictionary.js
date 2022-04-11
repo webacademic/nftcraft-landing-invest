@@ -4,30 +4,30 @@ const langArr = {
         "en": "MetaCraft",
         "ru": "MetaCraft"
     },
-    "menu-metacraft":{
-        "en": "menu-nftcraft",
-        "ru": "MetaCraft"
+    "menu-nftcraft":{
+        "en": "Web",
+        "ru": "Веб"
     },
-    "menu-metacraft":{
-        "en": "MetaCraft",
-        "ru": "MetaCraft"
-    },
-    "menu-metacraft":{
-        "en": "MetaCraft",
-        "ru": "MetaCraft"
-    },
-    "menu-metacraft":{
-        "en": "MetaCraft",
-        "ru": "MetaCraft"
+    "menu-unity":{
+        "en": "Unity (test)",
+        "ru": "Unity (test)"
     },
     "menu-partners":{
-        "en": "For partners",
-        "ru": "Партнерам"
+        "en": "Partners",
+        "ru": "Партнеры"
     },
     "menu-invest":{
         "en": "For investors",
         "ru": "Инвесторам"
+    }, 
+    "menu-partners2":{
+        "en": "Partners",
+        "ru": "Партнеры"
     },
+    "menu-invest2":{
+        "en": "For investors",
+        "ru": "Инвесторам"
+    },   
     "menu-roadmap": {
         "en": "Roadmap",
         "ru": "Roadmap"

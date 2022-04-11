@@ -2,6 +2,7 @@ header.header
   //- lang,name,link, image (otional), active (optional) 
   -let linksArr = [{lang: 'menu-metacraft', name: 'Metacraft.earth', link: 'http://dev.dwarfworld.ru/ru', image: true},{lang: 'menu-nftcraft', name: 'NFTCraft', link: 'http://tweb.nftcraft.game', image: true},{lang: 'menu-unity', name: 'Unity (test)', link: 'http://unity.nftcraft.game/', image: true}]
   -let extraLinkArr = [{lang: 'menu-partners', name: 'Партнерам', link: '#partners'},{lang: 'menu-invest', name: 'Инвесторам', link: 'https://invest.nftcraft.game', active: true}]
+  -let extraLinkArr2 = [{lang: 'menu-partners2', name: 'Партнерам', link: '#partners'},{lang: 'menu-invest2', name: 'Инвесторам', link: 'https://invest.nftcraft.game', active: true}]
   -let anchorArr = [{lang: 'menu-world', name: 'Миры', link: '#platform'},{lang: 'menu-tokens', name: 'ТОКЕНОМИКА', link: '#tokenomics'},{lang: 'menu-achievements', name: 'Результаты', link: '#achievements'},{lang: 'menu-roadmap', name: 'roadmap', link: '#roadmap'}]
   .mobile__header 
     .logo_mobile  
@@ -42,7 +43,7 @@ header.header
             a.en(data-lang-pick="en") English
     .menu__footer
       .menu.menu__extra 
-        each item in extraLinkArr
+        each item in extraLinkArr2
           .item(class= item.active ? "active" : "")          
             a(href=item.link, data-lang=item.lang) #{item.name}
   .top
