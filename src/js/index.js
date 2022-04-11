@@ -116,7 +116,7 @@ window.connectWallet = async function () {
     document.querySelector(".user.user__info").classList.remove("off");
   }
   else{
-      alert('Your browser dont support Metamask, pls use browser supported browser ( Chrome, Firefox, Brave, Edge')
+      alert('Your browser dont support Metamask, pls use browser supported browser ( Chrome, Firefox, Brave, Edge)')
   }
 };
 
