@@ -24,27 +24,27 @@
         font-weight: 400;
         font-size: rem(24);
         line-height: rem(28);
-        max-width: rem(255);            
-        span{
+        max-width: rem(255);
+        span {
             color: rgba(255, 255, 255, 1);
-            &.title-grey{
+            &.title-grey {
                 display: block;
                 color: rgba(255, 255, 255, 0.8);
             }
-            &.green{
+            &.green {
                 color: $textGreen;
                 text-shadow: 0px 0px 24px rgba(78, 255, 17, 0.4), 0px 0px 4px rgba(78, 255, 17, 0.6);
             }
-            &.blue{
+            &.blue {
                 color: $textBlue;
                 text-shadow: 0px 0px 24px rgba(0, 163, 255, 0.4), 0px 0px 4px rgba(0, 163, 255, 0.6);
             }
         }
-        img{
+        img {
             position: absolute;
-            left: rem(-40);  
+            left: rem(-40);
             top: 50%;
-            transform: translateY(-50%);          
+            transform: translateY(-50%);
         }
     }
     .img {
@@ -64,7 +64,7 @@
         text-transform: uppercase;
         margin-bottom: rem(26);
         text-shadow: $mainShadow;
-        span.green{
+        span.green {
             color: #4eff10;
         }
     }
@@ -94,7 +94,7 @@
                 line-height: 130%;
                 text-transform: uppercase;
                 color: #ffffff;
-                padding: 13px 16px;
+                padding: 13px 70px 13px 16px;
             }
             span {
                 position: absolute;
@@ -107,15 +107,21 @@
                 text-align: right;
                 text-transform: uppercase;
                 color: rgba(255, 255, 255, 0.6);
-                &.green{
+                &.green {
                     color: $textGreen;
                     text-shadow: 0px 0px 24px rgba(78, 255, 17, 0.4), 0px 0px 4px rgba(78, 255, 17, 0.6);
                 }
-                &.blue{
+                &.blue {
                     color: $textBlue;
                     text-shadow: 0px 0px 24px rgba(0, 163, 255, 0.4), 0px 0px 4px rgba(0, 163, 255, 0.6);
                 }
             }
+        }
+        .hint {
+            font-weight: 400;
+            font-size: rem(16);
+            line-height: 130%;
+            margin-bottom: 5px;
         }
         button {
             display: flex;
@@ -132,28 +138,28 @@
             line-height: 28px;
             text-align: right;
             text-transform: uppercase;
-            color: #ffffff;  
+            color: #ffffff;
             cursor: pointer;
             transition: all 0.5s ease-in-out;
             z-index: 1;
-            &:hover{
+            &:hover {
                 box-shadow: 0px 0px 5px rgba(255, 255, 255, 1), inset -1px 1px 2px rgba(255, 255, 255, 0.8),
-                inset 1px 1px 4px rgba(255, 255, 255, 1);
-                img{
+                    inset 1px 1px 4px rgba(255, 255, 255, 1);
+                img {
                     transform: translateX(10px);
                 }
             }
-            img{
+            img {
                 transition: all 1s ease-in-out;
             }
-            span{
+            span {
                 padding-right: 16px;
-            } 
-            &:disabled{
+            }
+            &:disabled {
                 background: rgb(145, 145, 145);
                 pointer-events: none;
                 cursor: default;
-            }       
+            }
         }
     }
 
