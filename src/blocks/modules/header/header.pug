@@ -1,43 +1,80 @@
 header.header
-  .container
-    a.header__logo(href='/')
-      +picture('./img/header/logo', ['png', 'webp'], 'Logo NFT Craft')
-
-    .lang(data-lang-selector lang-value="en")
-      span.lang-selected
-      +picture('./img/header/lang_arrow', ['png', 'webp'], 'arrow')
-      ul.lang-list
-        li.lang-list__item
-          a.ru(data-lang-pick="ru") RUS
-        li.lang-list__item
-          a.en(data-lang-pick="en") ENG
-    nav.header__nav
-      ul
-        li.list NFTcraft  
-          +picture('./img/header/lang_arrow', ['png', 'webp'], 'arrow')         
-          ul.dropdown-list 
-            li 
-              a(href='https://dwarfworld.ru/ru', target="_blank", rel="noopener noreferrer") Metacraft
-            li 
-              a(href="http://app.nftcraft.game", target="_blank", rel="noopener noreferrer") Web
-            li 
-              a(href="http://https://unity.nftcraft.game/", target="_blank", rel="noopener noreferrer")   Unity
-        li
-          a(href='#tokenomics' data-lang="menu-economics") Economics
-        li
-          a(href='#achievements' data-lang="menu-achievements") Achievements
-        li 
-          a(href="#roadmap" data-lang="menu-roadmap") Roadmap 
-        //- li.beta
-        //-   a(href='#token')             
-        //-     i
-        //-     i
-        //-     i
-        //-     i
-        //-     p(data-lang="menu-nct")        
+  //- lang,name,link, image (otional), active (optional) 
+  -let linksArr = [{lang: 'menu-metacraft', name: 'Metacraft.earth', link: 'http://dev.dwarfworld.ru/ru', image: true, active: true},{lang: 'menu-nftcraft', name: 'NFTCraft', link: 'http://tweb.nftcraft.game', image: true},{lang: 'menu-unity', name: 'Unity (test)', link: 'http://unity.nftcraft.game/', image: true}]
+  -let extraLinkArr = [{lang: 'menu-partners', name: 'Партнерам', link: '#partners'},{lang: 'menu-invest', name: 'Инвесторам', link: 'https://invest.nftcraft.game'}]
+  -let anchorArr = [{lang: 'menu-world', name: 'Миры', link: '#platform'},{lang: 'menu-tokens', name: 'ТОКЕНОМИКА', link: '#tokenomics'},{lang: 'menu-achievements', name: 'Результаты', link: '#achievements'},{lang: 'menu-roadmap', name: 'roadmap', link: '#roadmap'}]
+  .mobile__header 
+    .logo_mobile  
+      +picture('./img/header/logo-row', ['png', 'webp'], 'logo') 
+    button.burger-menu
+      span
+  .mobile__menu
+    .menu__top.menu 
+      each item in linksArr 
+        .item(class= item.active ? "active" : "")
+          if item.image
+            .icon-game            
+          a(href=item.link, rel="noopener noreferrer" data-lang=item.lang) #{item.name} 
+    .menu__main 
+      .button_play
         button.login.user(onclick="connectWallet()")
-          +picture('./img/header/login', ['png', 'webp'], 'metamask')
-          span(data-lang="menu-metamask-btn") Connect wallet
+            +picture('./img/header/login', ['png', 'webp'], 'metamask')
+            span(data-lang="menu-metamask-btn") Connect wallet
+        .user.user__info.off
+          .balance
+            span(onclick="addTokenToMetaMask()")
+                +picture('./img/header/add-token', ['png', 'webp'], 'logout')
+            span.green NCT:
+            span.userBalance 411 512
+          .logout
+            span(onclick="logout()")
+                +picture('./img/header/logout', ['png', 'webp'], 'logout')
+      .menu.menu__anchor 
+        each item in anchorArr 
+          a(href=item.link) #{item.name}
+      .lang(data-lang-selector lang-value="en")
+        span.lang-selected
+        +picture('./img/header/arrow', ['png', 'webp'], 'arrow')
+        ul.lang-list
+          li.lang-list__item
+            a.ru(data-lang-pick="ru") Russian
+          li.lang-list__item
+            a.en(data-lang-pick="en") English
+    .menu__footer
+      .menu.menu__extra 
+        each item in extraLinkArr
+          .item(class= item.active ? "active" : "")          
+            a(href=item.link, data-lang=item.lang) #{item.name}
+  .top
+    .menu.links
+      .logo
+        +picture('./img/header/logo-big', ['png', 'webp'], 'logo') 
+      each item in linksArr 
+        .item(class= item.active ? "active" : "")
+          if item.image
+            .icon-game            
+          a(href=item.link, rel="noopener noreferrer" data-lang=item.lang) #{item.name}
+      .menu__extra 
+        each item in extraLinkArr
+          .item(class= item.active ? "active" : "")          
+            a(href=item.link, data-lang=item.lang) #{item.name}
+      .lang(data-lang-selector lang-value="en")
+        span.lang-selected
+        +picture('./img/header/arrow', ['png', 'webp'], 'arrow')
+        ul.lang-list
+          li.lang-list__item
+            a.ru(data-lang-pick="ru") Russian
+          li.lang-list__item
+            a.en(data-lang-pick="en") English
+    
+  .bottom
+    .menu.menu__anchor 
+      each item in anchorArr 
+         a(href=item.link, data-lang=item.lang) #{item.name}
+      .button_play
+        button.login.user(onclick="connectWallet()")
+            +picture('./img/header/login', ['png', 'webp'], 'metamask')
+            span(data-lang="menu-metamask-btn") Connect wallet
         .user.user__info.off
           .balance
             span(onclick="addTokenToMetaMask()")
@@ -48,7 +85,3 @@ header.header
             .number.userAddress 0x37F...5E1dввоа
             span(onclick="logout()")
                 +picture('./img/header/logout', ['png', 'webp'], 'logout')
-    input#checkbox.mobile-menu__checkbox(type='checkbox')
-    label.mobile-menu__btn(for='checkbox')
-      span.mobile-menu__icon
-    //- a.beta__mobile(href='https://app.nftcraft.game' onclick="ym(86035474,'reachGoal','RUN_DEMO_EN')") Demo
