@@ -141,8 +141,8 @@ const langArr = {
         "ru": "Управляющий токен"
     },
     "tokenomics-descr-1-1": {
-        "en": "Governance platform token. Meant for investment and management purposes",
-        "ru": "Управляющий (governance) токен платформы, предназначенный для инвестиционных и управленческих целей."
+        "en": "Governance platform token. Meant for interaction and project management",
+        "ru": "Управляющий (governance) токен платформы, предназначенный для взаимодействия и управления проектом"
     },
     "tokenomics-name-2": {
         "en": "CraftUSD Stable Token",
@@ -193,8 +193,8 @@ const langArr = {
         "ru": "КАК ЗАРАБАТЫВАЮТ <br> ИГРОКИ"
     },
     "tokenomics-token-descr-1-1": {
-        "en": "Players, by completing tasks, participating in tournaments, building architectural structures, and mining valuable resources, receive cUSD - game stable token in the amount from 1/1000 to 1/50 of the current fund size.",
-        "ru": "Игроки, выполняя задания, участвуя в турнирах, строя архитектурные сооружения и добывая ценные ресурсы, получают cUSD - игровой стейблтокен в размере от 1/1000 до 1/50 от текущего размера фонда."
+        "en": "Players, by completing tasks, participating in tournaments, building architectural structures, and mining valuable resources, receive cUSD - game stable token dollar from 1/1000 to 1/50 per day.",
+        "ru": "Игроки, выполняя задания, участвуя в турнирах, строя архитектурные сооружения и добывая ценные ресурсы, получают cUSD - игровой стейблтокен доллара от 1/1000 до 1/50 в день."
     },
     "tokenomics-token-descr-1-2": {
         "en": "You can withdraw cUSD over time or buy with it: RAD prize pool tokens, NCT platform tokens, NFT objects, services, or other opportunities on the platform and worlds based on it.",
@@ -205,8 +205,8 @@ const langArr = {
         "ru": "КАК ЗАРАБАТЫВАЕТ <br> КОМАНДА"
     },
     "tokenomics-token-descr-2-1": {
-        "en": "The team earns through transaction fees of up to 15% and a share of the CraftFund's total game fund, 20%, at the time of unlock",
-        "ru": "Команда зарабатывает за счет комиссий с транзакций до 15% и доли от общего игрового фонда CraftFund в момент раскрытия в размере 20%."
+        "en": "The team earns with the sale of objects and services",
+        "ru": "Команда зарабатывает с продажи объектов и услуг"
     },
     "tokenomics-subtitle-3": {
         "en": "HOW INVESTORS EARN MONEY",
@@ -230,8 +230,8 @@ const langArr = {
         "ru": "Результаты"
     },
     "achievements-name-1": {
-        "en": "Сreated prototype of METACRAFT in Minecraft world",
-        "ru": "Создали прототип метавселенной METACRAFT в мире Minecraft"
+        "en": "Сreated prototype of METACRAFT based on Minecraft Mechanic",
+        "ru": "Создали прототип метавселенной METACRAFT на базе механик Minecraft"
     },
     "achievements-link-1": {
         "en": "Coming soon",
@@ -293,10 +293,6 @@ const langArr = {
         "en": "Video 01.10.21",
         "ru": "Видео 01.10.21"
     },
-    "achievements-link-8-2": {
-        "en": "Video 22.02.22",
-        "ru": "Видео 22.02.22"
-    },
     "achievements-name-9": {
         "en": "Released of Governance-token NCT",
         "ru": "Выпуск Governance-токена NCT"
@@ -355,8 +351,8 @@ const langArr = {
         "ru": "Инвестиции в маркетинг:"
     },
     "numbers-item-descr-5": {
-        "en": "500K USDT monthly from 05.2022",
-        "ru": "500K USDT ежемесячно с 05.2022"
+        "en": "200K - 600K USDT monthly from 05.2022",
+        "ru": "200K - 600K USDT ежемесячно с 05.2022"
     },
     "numbers-item-label-6": {
         "en": "Community:",
@@ -540,8 +536,8 @@ const langArr = {
         "ru": "Запуск международной рекламной кампании"
     },
     "road-block-3-6": {
-        "en": "METACRAFT universe in Minecraft world launch",
-        "ru": "Запуск метавселенной METACRAFT в мире Minecraft"
+        "en": "METACRAFT universe based on Minecraft Mechanic",
+        "ru": "Запуск метавселенной METACRAFT на базе механик Minecraft"
     },
     "road-block-3-7": {
         "en": "Major release of web-version in the Polygon blockchain",
@@ -601,8 +597,8 @@ const langArr = {
         "ru": "Fullstack разработчик"
     },
     "team-name-4": {
-        "en": "Dmitry Ragnwow",
-        "ru": "Дмитрий Рэгнволд"
+        "en": "Damon Ragnwow",
+        "ru": "Деймон Рэгнволд"
     },
     "team-5": {
         "en": "Art lead",
@@ -625,8 +621,8 @@ const langArr = {
         "ru": "Маркетолог / Аналитик"
     },
     "team-name-7": {
-        "en": "Sergey Kyarwal",
-        "ru": "Сергей Кьярваль"
+        "en": "Sergius Kyarwal",
+        "ru": "Серджиус Кьярваль"
     },
     "team-8": {
         "en": "Business assistant",
@@ -641,8 +637,8 @@ const langArr = {
         "ru": "Коммьюнити Лид"
     },
     "team-name-9": {
-        "en": "Nikolay Asbrandt",
-        "ru": "Николай Асбранд"
+        "en": "Nicholas Asbrandt",
+        "ru": "Николас Асбранд"
     },
     "partners-title": {
         "en": "Partners",
