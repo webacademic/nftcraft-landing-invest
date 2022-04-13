@@ -660,7 +660,19 @@ const langArr = {
     "footer-rights": {
         "en": "All Rights Reserved",
         "ru": "Все права защищены"
-    }   
+    },
+    "footer-not-official": {
+        "en": "We are not Minecraft and Mojang Studios official*",
+        "ru": "Мы не являемся официальными представителями Minecraft и Mojang Studios*"
+    },
+    "footer-offerta": {
+        "en": "The information on the site is not a public offer and is for informational purposes only",
+        "ru": "Информация на сайте не является публичной офертой и носит информационный характер"
+    },
+    "footer-rights": {
+        "en": "All Rights Reserved",
+        "ru": "Все права защищены"
+    }    
 }
 
 export { langArr };

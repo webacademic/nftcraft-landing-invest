@@ -11,5 +11,8 @@ footer
         -let links = ['t.me/NFTcraftRU', 't.me/NFTcraftEN', 'medium.com/@NFTcraft', 'discord.gg/RqepYZWpk6', 'twitter.com/NFTcraft_game']
         each val, index in links
             a(href="http://"+(val), target="_blank", rel="noopener noreferrer")  
-                +picture('./img/footer/link-'+(index+1), ['png', 'webp'])
-    .rights(data-lang="footer-rights") All Rights Reserved
+                +picture('./img/footer/link-'+(index+1), ['png', 'webp'])    
+    .text_grey(data-lang="footer-not-official") We are not Minecraft official*
+    .text_grey(data-lang="footer-offerta") The information on the site is not a public offer and is for informational purposes only    
+    .text_grey(data-lang="footer-rights") All Rights Reserved
+    a.text_grey(href="https://nftcraft.game/privacyPolicy.html" target="_blank" data-lang="footer-term") Terms of use

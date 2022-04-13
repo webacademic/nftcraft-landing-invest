@@ -5,37 +5,42 @@ footer {
     background: rgba(0, 0, 0, 0.4);
     padding: rem(48) rem(10);
     .text {
-    p {
-        font-weight: 400;
-        font-size: rem(16);
-        line-height: rem(19);
-        opacity: 0.8;
-        color: #ffffff;
-        text-align: center;
-        margin-bottom: rem(8);
-        &.small {
+        p {
+            font-weight: 400;
+            font-size: rem(16);
+            line-height: rem(19);
+            opacity: 0.8;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: rem(8);
+            &.small {
+                opacity: 0.5;
+            }
+        }
+        a {
+            text-decoration-line: underline;
+            color: #07f0ff;
             opacity: 0.5;
         }
     }
-    a {
-        text-decoration-line: underline;
-        color: #07f0ff;
-        opacity: 0.5;
+    .links {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        gap: rem(12);
+        margin-top: rem(36);
+        margin-bottom: rem(40);
     }
-}
-.links {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-    gap: rem(12);
-    margin-top: rem(36);
-    margin-bottom: rem(40);
-}
-.rights {
-    font-size: rem(16);
-    line-height: rem(19);
-    color: #ffffff;
-    opacity: 0.3;
-}
-
+    .text_grey {
+        font-size: rem(16);
+        line-height: rem(19);
+        color: #ffffff;
+        opacity: 0.3;
+        margin-bottom: 4px;
+        text-align: center;
+    }
+    a.text_grey {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
