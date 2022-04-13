@@ -589,7 +589,7 @@ const langArr = {
         "ru": "Гл. Blockchain разработчик"
     },
     "team-name-3": {
-        "en": "Andrei Thor",
+        "en": "Andrew Thor",
         "ru": "Андрей Тор"
     },
     "team-4": {
