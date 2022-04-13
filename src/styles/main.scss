@@ -12,3 +12,7 @@
 
 // БЭМ-блоки
 @import "../blocks/modules/modules";
+
+img {
+    user-select: none;
+}
