@@ -205,8 +205,8 @@ const langArr = {
         "ru": "КАК ЗАРАБАТЫВАЕТ <br> КОМАНДА"
     },
     "tokenomics-token-descr-2-1": {
-        "en": "The team earns with the sale of objects and services",
-        "ru": "Команда зарабатывает с продажи объектов и услуг"
+        "en": "The team earns with the sale of objects and services up to 15% and a share of the CraftFund's total game fund, 20%, at the time of unlock",
+        "ru": "Команда зарабатывает за счет комиссий с продажи объектов и услуг до 15% и доли от общего игрового фонда CraftFund в момент раскрытия в размере 20%."
     },
     "tokenomics-subtitle-3": {
         "en": "HOW INVESTORS EARN MONEY",
