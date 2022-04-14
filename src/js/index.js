@@ -33,10 +33,32 @@ async function getGasPrice() {
   return Math.floor(basePrice * gasBoost);
 }
 
+let minUSDT = 7500,
+  minNCT = 50000;
+
+const endSaleTime = '2022.04.18';
+let saleHint = document.querySelector('.exchanger .hint');
+let saleTextHidden = document.querySelector('.exchanger .sale-text');
+// let saleTimerBlock = document.querySelector('.exchanger .sale-text .number');
+
+window.onload = function(){
+  if (getTimeRemaining(endSaleTime) > 0){
+    minUSDT = 500;
+    minNCT = 3333;
+    saleHint.classList.add('sale');
+    saleTextHidden.classList.add('active');
+  }
+}
+
+function getTimeRemaining(endSaleTime){
+  const t = Date.parse(endSaleTime) - Date.parse(new Date());
+  return t;
+}
+
+
 window.updateUSDTAmount = async function () {
   const amount = document.querySelector('input[name="nct"]').value * price;
-  const min = document.querySelector('input[name="usdt"]').min;
-  if (amount < min) {
+  if (amount < minUSDT) {
     document.querySelector(".exchanger button").disabled = true;
   } else {
     document.querySelector(".exchanger button").disabled = false;
@@ -46,9 +68,9 @@ window.updateUSDTAmount = async function () {
 
 window.updateNCTAmount = async function () {
   const amount = document.querySelector('input[name="usdt"]').value / price;
-  const min = document.querySelector('input[name="nct"]').min;
+  const min = document.querySelector('input[name="nct"]').minNCT;
   document.querySelector('input[name="nct"]').value = round(amount, 2);
-  if (amount < min) {
+  if (amount < minNCT) {
     document.querySelector(".exchanger button").disabled = true;
   } else {
     document.querySelector(".exchanger button").disabled = false;

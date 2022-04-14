@@ -79,8 +79,8 @@ const langArr = {
         "ru": "Cумма денег: "
     },
     "token-exchange-hint": {
-        "en": "Min 7500 USDT",
-        "ru": "Мин. 7500 USDT "
+        "en": "Min ",
+        "ru": "Мин. "
     },
     "token-exchange-btn": {
         "en": "Buy ",
@@ -516,8 +516,8 @@ const langArr = {
         "ru": "Внедрение целевой модели экономики и токенометрики"
     },
     "road-block-3-1": {
-        "en": "META.CITY prototyping in Minecraft world",
-        "ru": "Создание прототипа META.CITY в мире Minecraft"
+        "en": "CRAFT.CITY prototyping in Minecraft world",
+        "ru": "Создание прототипа CRAFT.CITY в мире Minecraft"
     },
     "road-block-3-2": {
         "en": "Release of NCT/RAD/cUSD tokens",
@@ -556,8 +556,8 @@ const langArr = {
         "ru": "Расширение метавселенной METACRAFT до 300K пользователей"
     },
     "road-block-4-1": {
-        "en": "Creating META.CITY with all the cultural attractions of the world as NFT objects",
-        "ru": "Создание META.CITY со всеми культурными достопримечательностями мира в виде NFT-объектов"
+        "en": "Creating CRAFT.CITY with all the cultural attractions of the world as NFT objects",
+        "ru": "Создание CRAFT.CITY со всеми культурными достопримечательностями мира в виде NFT-объектов"
     },
     "road-block-4-2": {
         "en": "Connecting the most popular AAA games to the METACRAFT.EARTH economy",

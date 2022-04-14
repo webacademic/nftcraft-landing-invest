@@ -118,10 +118,28 @@
             }
         }
         .hint {
+            display: inline-block;
             font-weight: 400;
             font-size: rem(16);
             line-height: 130%;
             margin-bottom: 5px;
+            &.sale {
+                text-decoration: line-through;
+            }
+        }
+        .sale-text {
+            display: none;
+            padding-bottom: 10px;
+            color: #00a3ff;
+            text-shadow: 0px 0px 24px rgba(0, 163, 255, 0.4);
+            &.active {
+                display: block;
+            }
+            .number{
+                font-size: 18px;
+                font-weight: 600;
+                animation: saleText 2.5s infinite;
+            }
         }
         button {
             display: flex;
@@ -162,63 +180,6 @@
             }
         }
     }
-
-    // .descr {
-    //     position: relative;
-    //     z-index: 1;
-    //     font-weight: 400;
-    //     font-size: rem(20);
-    //     line-height: 140%;
-    //     margin-bottom: rem(48);
-    //     opacity: 0.8;
-    //     max-width: rem(540);
-    // }
-    // .btn {
-    //     position: relative;
-    //     z-index: 1;
-    //     width: rem(288);
-    //     height: rem(64);
-    //     margin-bottom: rem(48);
-    // }
-    // .info {
-    //     position: relative;
-    //     z-index: 1;
-    //     padding: rem(20);
-    //     background: url(./../images/main/info-bg.svg) center center no-repeat;
-    //     background-size: 100% 100%;
-    //     max-width: rem(288);
-    //     .label {
-    //         color: $emeraldColor;
-    //         font-weight: 700;
-    //         font-size: rem(11);
-    //         line-height: 150%;
-    //         margin-bottom: rem(14);
-    //         max-width: rem(226);
-    //     }
-    //     .row {
-    //         display: flex;
-    //         gap: rem(12);
-    //         &:not(:last-child) {
-    //             margin-bottom: rem(14);
-    //         }
-    //     }
-    //     .name {
-    //         font-weight: 700;
-    //         font-size: rem(8.5);
-    //         line-height: 120%;
-    //         margin-bottom: rem(2);
-    //         color: #6ac9ce;
-    //     }
-    //     .count {
-    //         font-weight: 700;
-    //         font-size: rem(11);
-    //         line-height: 120%;
-    //         color: #bdfbff;
-    //     }
-    //     .block {
-    //         width: 50%;
-    //     }
-    // }
 }
 
 @media (max-width: $lgTableWidth) {
@@ -257,5 +218,20 @@
             align-items: center;
             flex-direction: column;
         }
+    }
+}
+
+@keyframes saleText {    
+    20% {
+        filter: grayscale(0.8);
+        text-shadow: 0px 0px 6px rgba(0, 163, 255, 0.6);
+    }
+    50% {
+        filter: grayscale(1) brightness(1.2);
+        text-shadow: 0px 0px 12px rgba(0, 163, 255, 0.9);
+    }
+    80% {
+        filter: grayscale(0.9);
+        text-shadow: 0px 0px 6px rgba(0, 163, 255, 0.6);
     }
 }

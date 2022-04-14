@@ -19,11 +19,16 @@ section.token#token
         .exchanger
             .label(data-lang="token-exchange-title") Amount:
             .input 
-                input(type="number", value="50000", name="nct", onkeyup="updateUSDTAmount()", onchange="updateUSDTAmount()", min="0")
+                input(type="number", value="50000", name="nct", onkeyup="updateUSDTAmount()", onchange="updateUSDTAmount()")
                 span.green NCT
-            p.hint(data-lang="token-exchange-hint") Min 7500 USDT
+            .hint     
+                span(data-lang="token-exchange-hint") Min 
+                span.number 7500 USDT
+            .sale-text
+                span Min 500 USDT, left 
+                span.number#timer 04:00:00
             .input
-                input(type="number", value="7500", name="usdt", onkeyup="updateNCTAmount()", onchange="updateNCTAmount()", min="0" step="150")
+                input(type="number", value="7500", name="usdt", onkeyup="updateNCTAmount()", onchange="updateNCTAmount()" step="150")
                 span.blue USDT
             button(onclick="buyNCT()")
                 span(data-lang="token-exchange-btn") Buy
