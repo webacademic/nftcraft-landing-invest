@@ -6,7 +6,7 @@ window.Web3 = Web3;
 let web3;
 
 const USDT_ADDRESS = "0xc2132D05D31c914a87C6611C10748AEb04B58e8F";
-const NCT_SELL_ADDRESS = "0x0a543229696054f8bf7e3113b284aea5807e12dd";
+const NCT_SELL_ADDRESS = "0x96eb85e181175e3f1624842be13a214679c97db1";
 const NCT_ADDRESS = "0x75e35522ec4fd6d815191c2a4134477a33cfd829";
 const ABI_TOKEN =
   JSON.parse(`[{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"spender","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"userAddress","type":"address"},{"indexed":false,"internalType":"address payable","name":"relayerAddress","type":"address"},{"indexed":false,"internalType":"bytes","name":"functionSignature","type":"bytes"}],"name":"MetaTransactionExecuted","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"bytes32","name":"role","type":"bytes32"},{"indexed":true,"internalType":"bytes32","name":"previousAdminRole","type":"bytes32"},{"indexed":true,"internalType":"bytes32","name":"newAdminRole","type":"bytes32"}],"name":"RoleAdminChanged","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"bytes32","name":"role","type":"bytes32"},{"indexed":true,"internalType":"address","name":"account","type":"address"},{"indexed":true,"internalType":"address","name":"sender","type":"address"}],"name":"RoleGranted","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"bytes32","name":"role","type":"bytes32"},{"indexed":true,"internalType":"address","name":"account","type":"address"},{"indexed":true,"internalType":"address","name":"sender","type":"address"}],"name":"RoleRevoked","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Transfer","type":"event"},
@@ -16,14 +16,21 @@ const ABI_TOKEN =
 {"internalType":"uint256","name":"addedValue","type":"uint256"}],"name":"increaseAllowance","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"name_","type":"string"},{"internalType":"string","name":"symbol_","type":"string"},{"internalType":"uint8","name":"decimals_","type":"uint8"},{"internalType":"address","name":"childChainManager","type":"address"}],"name":"initialize","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes32","name":"role","type":"bytes32"},{"internalType":"address","name":"account","type":"address"}],"name":"renounceRole","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes32","name":"role","type":"bytes32"},{"internalType":"address","name":"account","type":"address"}],"name":"revokeRole","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"recipient","type":"address"},
 {"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transfer","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"sender","type":"address"},{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transferFrom","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"withdraw","outputs":[],"stateMutability":"nonpayable","type":"function"}]`);
 const ABI_SELLER = JSON.parse(
-  `[{"inputs":[{"internalType":"address","name":"_tokenSell","type":"address"},{"internalType":"address","name":"_tokenBuy","type":"address"},{"internalType":"address","name":"_seller","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[{"internalType":"uint256","name":"_amountSell","type":"uint256"}],"name":"getAmounts","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"price","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_newPrice","type":"uint256"}],"name":"setPrice","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_amountSell","type":"uint256"}],"name":"swap","outputs":[{"internalType":"uint256","name":"_amountBuy","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"tokenBuy","outputs":[{"internalType":"contract IERC20","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"tokenSell","outputs":[{"internalType":"contract IERC20","name":"","type":"address"}],"stateMutability":"view","type":"function"}]`
+  `[{"inputs":[{"internalType":"address","name":"_tokenSell","type":"address"},{"internalType":"address","name":"_tokenBuy","type":"address"},{"internalType":"address","name":"_seller","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":false,"internalType":"uint256","name":"amountBuy","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"amountSell","type":"uint256"},{"indexed":false,"internalType":"bytes32","name":"id","type":"bytes32"}],"name":"Ref","type":"event"},{"inputs":[{"internalType":"uint256","name":"_amountSell","type":"uint256"}],"name":"getAmounts","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"maxAmount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"minAmount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"price","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_newMaxAmount","type":"uint256"}],"name":"setMaxAmount","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_newMinAmount","type":"uint256"}],"name":"setMinAmount","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_newPrice","type":"uint256"}],"name":"setPrice","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_amountSell","type":"uint256"},{"internalType":"bytes32","name":"id","type":"bytes32"}],"name":"swap","outputs":[{"internalType":"uint256","name":"_amountBuy","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"tokenBuy","outputs":[{"internalType":"contract IERC20","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"tokenSell","outputs":[{"internalType":"contract IERC20","name":"","type":"address"}],"stateMutability":"view","type":"function"}]`
 );
 const price = 0.15;
-const gasMaxForSwap = 350000;
+const gasMaxForSwap = 450000;
+const gasBoost = 1.15; // 1.15 == 15%
 
 function round(n, p) {
   const d = 10 ** p;
   return Math.floor(n * d) / d;
+}
+
+async function getGasPrice() {
+  if (gasBoost > 5) throw new Error(`gas boost`);
+  const basePrice =  await web3.eth.getGasPrice();
+  return Math.floor(basePrice * gasBoost);
 }
 
 window.updateUSDTAmount = async function () {
@@ -91,7 +98,28 @@ async function switchToPolygonChain() {
   }
 }
 
-let conectWalletBtns = document.querySelectorAll('.button_play .login.user');
+// let conectWalletBtns = document.querySelectorAll('.button_play .login.user');
+
+async function refreshInfo(userAddress) {
+  const accounts = await window.ethereum.request({
+    method: "eth_requestAccounts",
+  });
+  if (!(accounts.length > 0)) return;
+
+  const walletAddress = accounts[0].toLowerCase();
+  document.querySelector(".userAddress").innerHTML =
+      walletAddress.substr(0, 4) +
+      "..." +
+      walletAddress.substr(walletAddress.length - 4);
+
+  const nctToken = new web3.eth.Contract(ABI_TOKEN, NCT_ADDRESS);
+  const nctAmount =
+      (await nctToken.methods.balanceOf(walletAddress).call()) * 1;
+  document.querySelectorAll(".userBalance").forEach(x => x.innerHTML = round(
+      nctAmount / 1e18,
+      2
+  ));
+}
 
 window.connectWallet = async function () {
   if (typeof window["ethereum"] !== "undefined") {
@@ -99,41 +127,23 @@ window.connectWallet = async function () {
 
     await switchToPolygonChain();
 
-    const accounts = await window.ethereum.request({
-      method: "eth_requestAccounts",
-    });
-    const walletAddress = accounts[0].toLowerCase();
-    document.querySelector(".userAddress").innerHTML =
-      walletAddress.substr(0, 4) +
-      "..." +
-      walletAddress.substr(walletAddress.length - 4);
-    const nctToken = new web3.eth.Contract(ABI_TOKEN, NCT_ADDRESS);
-    const nctAmount =
-      (await nctToken.methods.balanceOf(accounts[0]).call()) * 1;
-    document.querySelectorAll(".userBalance")[0].innerHTML = round(
-      nctAmount / 1e18,
-      2
-    );
-    document.querySelectorAll(".userBalance")[1].innerHTML = round(
-      nctAmount / 1e18,
-      2
-    );
-    document.querySelectorAll(".button_play .login.user")[0].classList.add("off");
-    document.querySelectorAll(".button_play .user.user__info")[0].classList.remove("off");
-    document.querySelectorAll(".button_play .login.user")[1].classList.add("off");
-    document.querySelectorAll(".button_play .user.user__info")[1].classList.remove("off");
+    await refreshInfo();
+
+    document.querySelectorAll(".button_play .login.user").forEach(x => x.classList.add('off'));
+    document.querySelectorAll(".button_play .user.user__info").forEach(x => x.classList.remove('off'));
   }
-  else{
+  else
+  {
       alert('Your browser dont support Metamask, pls use browser supported browser ( Chrome, Firefox, Brave, Edge)')
   }
 };
 
 window.logout = function () {
-  document.querySelectorAll("button.login")[0].classList.remove("off");
-  document.querySelectorAll(".user.user__info")[0].classList.add("off");
+  document.querySelectorAll("button.login").forEach(x => x.classList.remove("off"));
+  document.querySelectorAll(".user.user__info").forEach(x => x.classList.add("off"));
 
-   document.querySelectorAll("button.login")[1].classList.remove("off");
-  document.querySelectorAll(".user.user__info")[1].classList.add("off");
+  // document.querySelectorAll("button.login")[1].classList.remove("off");
+  // document.querySelectorAll(".user.user__info")[1].classList.add("off");
 };
 
 window.buyNCT = async function () {
@@ -175,16 +185,21 @@ window.buyNCT = async function () {
       .call();
     console.log("approvedAmount", approvedAmount);
     console.log("requiredUSDTAmount", requiredUSDTAmount);
+
+    const gasPrice = await getGasPrice();
+    // click id
+    const id = "0x00000000000000000000000000000000";
+
     if (approvedAmount < requiredUSDTAmount) {
       await new Promise((success) => {
         usdt.methods
           .approve(NCT_SELL_ADDRESS, requiredUSDTAmount)
-          .send({ from: accounts[0] })
+          .send({ from: accounts[0], gasPrice: gasPrice })
           .on("transactionHash", async function (hash) {
             await new Promise((success) => {
               nctSell.methods
-                .swap(hex(requiredNCTAmount))
-                .send({ from: accounts[0], gas: gasMaxForSwap })
+                .swap(hex(requiredNCTAmount), id)
+                .send({ from: accounts[0], gas: gasMaxForSwap, gasPrice: gasPrice })
                 .on("transactionHash", function (hash) {
                   //
                 })
@@ -200,8 +215,8 @@ window.buyNCT = async function () {
     } else {
       await new Promise((success) => {
         nctSell.methods
-          .swap(hex(requiredNCTAmount))
-          .send({ from: accounts[0], gas: gasMaxForSwap })
+          .swap(hex(requiredNCTAmount), id)
+          .send({ from: accounts[0], gas: gasMaxForSwap, gasPrice: gasPrice })
           .on("transactionHash", function (hash) {
             //
           })
@@ -209,6 +224,8 @@ window.buyNCT = async function () {
             success();
           });
       });
+
+      await refreshInfo();
     }
   }
 };
