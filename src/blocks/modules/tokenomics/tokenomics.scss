@@ -39,7 +39,6 @@
         &:not(:last-child) {
             margin-bottom: rem(60);
         }
-
     }
 
     .content {
@@ -47,8 +46,8 @@
 
         p {
             font-weight: 400;
-font-size: rem(20);
-line-height: 150%;
+            font-size: rem(20);
+            line-height: 150%;
 
             &:not(:last-child) {
                 margin-bottom: rem(10);
@@ -63,28 +62,28 @@ line-height: 150%;
         text-transform: uppercase;
         margin-bottom: rem(24);
 
-        
-
         &.emerald {
-            text-shadow: 0px 0px 64px #5ACD00, 0px 0px 24px #5ACD00, 0px 0px 6px #5ACD00;        
+            text-shadow: 0px 0px 64px #5acd00, 0px 0px 24px #5acd00, 0px 0px 6px #5acd00;
         }
 
         &.purple {
-            text-shadow: 0px 0px 64px #06FC68, 0px 0px 24px #06FC68, 0px 0px 6px #06FC68;
-
+            text-shadow: 0px 0px 64px #06fc68, 0px 0px 24px #06fc68, 0px 0px 6px #06fc68;
         }
 
         &.blue {
-            text-shadow: 0px 0px 64px #0066FF, 0px 0px 24px #0066FF, 0px 0px 6px #0066FF;
-
-
+            text-shadow: 0px 0px 64px #0066ff, 0px 0px 24px #0066ff, 0px 0px 6px #0066ff;
         }
-
     }
     .text {
         padding: rem(18) rem(24);
         p {
             text-align: left;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.1875rem;
+            opacity: .8;
+            color: #fff;
+            margin-bottom: 0.5rem;
         }
         &.one {
             background: radial-gradient(100% 100% at 0% 0%, rgba(0, 102, 255, 0.12) 0%, rgba(0, 102, 255, 0) 100%);
@@ -124,11 +123,11 @@ line-height: 150%;
         i {
             font-weight: 400;
             font-size: rem(16);
-            line-height: 130%
+            line-height: 130%;
         }
         &.five {
             margin-bottom: rem(20);
-            border: 1px solid rgba(255, 255, 255, .25);
+            border: 1px solid rgba(255, 255, 255, 0.25);
         }
     }
     .tabs {
@@ -139,9 +138,6 @@ line-height: 150%;
         .item {
             width: calc(25% - rem(20));
         }
-        
-        
-
     }
 }
 
@@ -177,7 +173,7 @@ line-height: 150%;
     }
 }
 
-@media (max-width: $smTableWidth) { 
+@media (max-width: $smTableWidth) {
     .tokenomics {
         .title {
             font-size: 28px;
