@@ -129,11 +129,11 @@ const langArr = {
     },
     // tokenomics
     "tokenomics-title": {
-        "en": "Tockenomic project",
+        "en": "Tokenomic project",
         "ru": "ТОКЕНОМИКА ПРОЕКТА"
     },
     "tokenomics-label": {
-        "en": "Basic concepts of Tockenomics of the Universe Metacraft",
+        "en": "Basic concepts of Tokenomics of the Universe Metacraft",
         "ru": "Основные понятия токеномики вселенной METACRAFT"
     },
     "tokenomics-name-1": {
