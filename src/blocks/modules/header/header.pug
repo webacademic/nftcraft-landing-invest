@@ -1,12 +1,13 @@
 header.header
   //- lang,name,link, image (otional), active (optional) 
-  -let linksArr = [{lang: 'menu-metacraft', name: 'Metacraft.earth', link: 'http://dev.dwarfworld.ru/ru', image: true},{lang: 'menu-nftcraft', name: 'NFTCraft', link: 'http://tweb.nftcraft.game', image: true},{lang: 'menu-unity', name: 'Unity (test)', link: 'http://unity.nftcraft.game/', image: true}]
+  -let linksArr = [{lang: 'menu-metacraft', name: 'Metacraft.earth', link: 'https://mine.nftcraft.game/', image: true},{lang: 'menu-nftcraft', name: 'NFTCraft', link: 'https://web.nftcraft.game', image: true},{lang: 'menu-unity', name: 'Unity (test)', link: 'https://unity.nftcraft.game/', image: true}]
   -let extraLinkArr = [{lang: 'menu-partners', name: 'Партнерам', link: '#partners'},{lang: 'menu-invest', name: 'Инвесторам', link: 'https://invest.nftcraft.game', active: true}]
   -let extraLinkArr2 = [{lang: 'menu-partners2', name: 'Партнерам', link: '#partners'},{lang: 'menu-invest2', name: 'Инвесторам', link: 'https://invest.nftcraft.game', active: true}]
   -let anchorArr = [{lang: 'menu-world', name: 'Миры', link: '#platform'},{lang: 'menu-tokens', name: 'ТОКЕНОМИКА', link: '#tokenomics'},{lang: 'menu-achievements', name: 'Результаты', link: '#achievements'},{lang: 'menu-roadmap', name: 'roadmap', link: '#roadmap'}]
   .mobile__header 
-    .logo_mobile  
-      +picture('./img/header/logo-row', ['png', 'webp'], 'logo') 
+    a(href="https://nftcraft.game", target="_blank", rel="noopener noreferrer") 
+      .logo_mobile
+        +picture('./img/header/logo-row', ['png', 'webp'], 'logo')
     button.burger-menu
       span
   .mobile__menu
@@ -48,7 +49,7 @@ header.header
             a(href=item.link, data-lang=item.lang) #{item.name}
   .top
     .menu.links
-      .logo
+      a.logo(href="https://nftcraft.game", target="_blank", rel="noopener noreferrer")       
         +picture('./img/header/logo-big', ['png', 'webp'], 'logo') 
       each item in linksArr 
         .item(class= item.active ? "active" : "")
