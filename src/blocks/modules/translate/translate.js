@@ -21,10 +21,10 @@ function changeUrlLang(target) {
 function changeLang() {
     let hash = window.location.hash;
     hash = hash.substring(1);
-    if (!allLang.includes(hash)) {
-        location.href = window.location.pathname + defLang;
-        location.reload();
-    }
+    // if (!allLang.includes(hash)) {
+    //     location.href = window.location.pathname + defLang;
+    //     location.reload();
+    // }
     langSelect[0].value = hash;
     langSelect[1].value = hash;
     for (let key in langArr) {
