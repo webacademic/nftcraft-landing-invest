@@ -188,7 +188,13 @@ window.buyNCT = async function () {
 
     const gasPrice = await getGasPrice();
     // click id
-    const id = "0x00000000000000000000000000000000";
+    let id = "0x00000000000000000000000000000000";
+    try
+    {
+      if (sessionStorage && sessionStorage['rtkclickid']) id = '0x' + sessionStorage['rtkclickid'];
+    }catch (e) {
+      console.error(e);
+    }
 
     if (approvedAmount < requiredUSDTAmount) {
       await new Promise((success) => {
