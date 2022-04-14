@@ -42,7 +42,7 @@ let saleTextHidden = document.querySelector('.exchanger .sale-text');
 // let saleTimerBlock = document.querySelector('.exchanger .sale-text .number');
 
 window.onload = function(){
-  if (getTimeRemaining(endSaleTime) > 0){
+  if (getTimeRemaining(endSaleTime).total > 0){
     minUSDT = 500;
     minNCT = 3333;
     saleHint.classList.add('sale');
@@ -50,10 +50,47 @@ window.onload = function(){
   }
 }
 
-function getTimeRemaining(endSaleTime){
-  const t = Date.parse(endSaleTime) - Date.parse(new Date());
-  return t;
+function getTimeRemaining(endtime) {
+  let t = Date.parse(endtime) - Date.parse(new Date());
+  let seconds = Math.floor((t / 1000) % 60);
+  let minutes = Math.floor((t / 1000 / 60) % 60);
+  let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  let days = Math.floor(t / (1000 * 60 * 60 * 24));
+  
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
 }
+
+// 
+
+function initializeClock(timer, endtime) {
+  let clock = document.getElementById(timer);
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    let daysSpan = t.days;
+    let hoursSpan = ('0' + t.hours).slice(-2);
+    let minutesSpan = ('0' + t.minutes).slice(-2);
+    let secondsSpan = ('0' + t.seconds).slice(-2);
+    clock.innerHTML = ' ' + daysSpan + 'd  ' + hoursSpan +':'+minutesSpan+':'+secondsSpan;
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  let timeinterval = setInterval(updateClock, 1000);
+}
+
+initializeClock('timer', endSaleTime);
+// 
 
 
 window.updateUSDTAmount = async function () {

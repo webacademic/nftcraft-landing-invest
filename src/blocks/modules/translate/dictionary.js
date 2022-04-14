@@ -82,6 +82,10 @@ const langArr = {
         "en": "Min ",
         "ru": "Мин. "
     },
+    "token-exchange-hint-sale":{
+        "en": "Min 500 USDT, left",
+        "ru": "Мин. 500 USDT, осталось"
+    },
     "token-exchange-btn": {
         "en": "Buy ",
         "ru": "купить "
