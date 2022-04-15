@@ -37,7 +37,7 @@ const langArr = {
         "ru": "Миры"
     },
     "menu-tokens":{
-        "en": "TOKENOMICA",
+        "en": "TOKENOMICS",
         "ru": "ТОКЕНОМИКА"
     },
     "menu-achievements":{
@@ -238,8 +238,8 @@ const langArr = {
         "ru": "Создали прототип метавселенной METACRAFT на базе механик Minecraft"
     },
     "achievements-link-1": {
-        "en": "Coming soon",
-        "ru": "Скоро будет"
+        "en": "Site",
+        "ru": "Сайт"
     },
     "achievements-name-2": {
         "en": "Received funding of $3.7M USD",

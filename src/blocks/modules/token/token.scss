@@ -133,6 +133,7 @@
             display: none;
             padding-bottom: 10px;
             font-weight: 600;
+            white-space: nowrap;
             &.active {
                 display: block;
             }
