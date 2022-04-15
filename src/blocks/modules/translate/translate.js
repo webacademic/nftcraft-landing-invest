@@ -36,7 +36,7 @@ function changeLang() {
 }
 
 const selectLang = () => {
-    let lang = window.location.hash.substring(1);
+    let lang = window.location.hash.substring(1) || 'en';
     
     selectedLang[0].className = '';
     selectedLang[0].classList.add(lang);
