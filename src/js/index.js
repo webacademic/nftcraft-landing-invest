@@ -205,8 +205,14 @@ window.logout = function () {
   // document.querySelectorAll(".user.user__info")[1].classList.add("off");
 };
 
+function getCookie(name) {
+  var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  if (match) return match[2];
+}
+
 window.buyNCT = async function () {
   await connectWallet();
+
   await updateUSDTAmount();
   if (web3 === null) {
     return;
@@ -250,7 +256,12 @@ window.buyNCT = async function () {
     let id = "0x00000000000000000000000000000000";
     try
     {
-      if (sessionStorage && sessionStorage['rtkclickid']) id = '0x' + sessionStorage['rtkclickid'];
+      const rtkclickid = getCookie('rtkclickid-store');
+      if (rtkclickid) {
+        id = '0x';
+        for(let i = 0; i < (32 - rtkclickid.length/2);i++) id += '00';
+        id += rtkclickid;
+      }
     }catch (e) {
       console.error(e);
     }
