@@ -1,11 +1,12 @@
 import { langArr } from "./dictionary";
 
 const selectedLang = document.querySelectorAll(".lang-selected"),
-  langListItems = document.querySelectorAll(".lang-list__item"),
-  allLang = { en: "English", ru: "Русский" },
-  defLang = "en";
-
-let currentLang = localStorage.getItem("currentLang") || defLang;
+    langListItems = document.querySelectorAll(".lang-list__item"),
+    allLang = { en: "English", ru: "Русский" },
+    defLang = "en",
+    navigatorLang = navigator.language.substring(0, 2);
+    
+let currentLang = localStorage.getItem("currentLang") || navigatorLang || defLang;
 
 langListItems.forEach((item) => {
   item.addEventListener("click", (e) => {
