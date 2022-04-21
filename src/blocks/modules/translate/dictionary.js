@@ -693,7 +693,113 @@ const langArr = {
     "footer-rights": {
         "en": "All Rights Reserved",
         "ru": "Все права защищены"
-    }    
+    },
+    // Popup ref
+    "popup-ref-title": {
+        "en": "REFERRAL PROGRAM",
+        "ru": "РЕФЕРАЛЬНАЯ ПРОГРАММА "
+    },
+    "popup-ref-text-bold-1": {
+        "en": "How does it work?",
+        "ru": "Как это работает? "
+    },
+    "popup-ref-text-1": {
+        "en": "Register in the Partner Cabinet",
+        "ru": "Регистрируетесь партнерском кабинете"
+    },
+    "popup-ref-text-2": {
+        "en": 'Choose the "Main Campaign".',
+        "ru": 'Выбираете “Main Campaign”'
+    },
+    "popup-ref-text-3": {
+        "en": "Register customers through your referral link Tracking URL",
+        "ru": "Регистрируете клиентов по вашей реферальной ссылке Tracking URL"
+    },
+    "popup-ref-text-4": {
+        "en": "Get rewarded by NCT token from all payments of the referred clients to your MetaMask wallet",
+        "ru": "Получайте вознаграждение в NCT, со всех оплат приведенных клиентов на кошелек Метамаск"
+    },
+    "popup-ref-text-bold-2": {
+        "en": "Bounty reward system",
+        "ru": "Система вознаграждений"
+    },
+    "popup-ref-text-4": {
+        "en": "Get rewarded by NCT token from all payments of the referred clients to your MetaMask wallet",
+        "ru": "Получайте вознаграждение в NCT, со всех оплат приведенных клиентов на кошелек Метамаск"
+    },
+    "popup-ref-text-bold-2": {
+        "en": "Bounty reward system",
+        "ru": "Система вознаграждений"
+    },
+    // 
+    "popup-ref-text-5": {
+        "en": "NCT purchase from 50 000 to 74 999 - 2% interest",
+        "ru": "от 50 000 до 74 999 NCT- получаете 2% "
+    },
+    "popup-ref-text-6": {
+        "en": "NCT purchase from 75 000 to 99 999 - 3% interest",
+        "ru": "от 75 000 до 99 999 NCT - получаете 3%"
+    },
+    "popup-ref-text-7": {
+        "en": "NCT purchase from 100 000 to 149 999 - 4% interest",
+        "ru": "от 100 000 до 149 999 NCT - получаете 4%"
+    },
+    "popup-ref-text-8": {
+        "en": "NCT purchase from 150 000 to 199 999 - 5% interest",
+        "ru": "от 150 000 до 199 999 NCT - получаете 5%"
+    },
+    "popup-ref-text-9": {
+        "en": "NCT purchase from 200 000 to 249 999 - 6% interest",
+        "ru": "от 200 000 до 249 999 NCT - получаете 6%"
+    },
+    "popup-ref-text-10": {
+        "en": "NCT purchase from 250 000 to 299 999 - 7% interest",
+        "ru": "от 250 000 до 299 999 NCT - получаете 7% "
+    },
+    "popup-ref-text-11": {
+        "en": "NCT purchase from 300 000 to 399 999 - 8% interest",
+        "ru": "от 300 000 до 399 999 NCT - получаете 8%"
+    },
+    "popup-ref-text-12": {
+        "en": "NCT purchase from 400 000 to 499 999 - 9% interest",
+        "ru": "от 400 000 до 499 999 NCT - получаете 9%"
+    },
+    "popup-ref-text-13": {
+        "en": "When you buy over 500,000  NCT - 10% interest  ",
+        "ru": "свыше 500 000  NCT - получаете 10%"
+    },
+    "popup-ref-hint": {
+        "en": "Payments are made from the 1st to the 5th of each month",
+        "ru": "Выплаты производятся с 1 по 5 число каждого месяца"
+    },
+    "popup-ref-img-title": {
+        "en": "MONETIZE YOUR REMMENDATIONS",
+        "ru": "МОНЕТИЗИРУЙТЕ СВОИ РЕКОМЕНДАЦИИ"
+    },
+    "popup-ref-btn": {
+        "en": "BECOME A PARTNER",
+        "ru": "СТАТЬ ПАРТНЕРОМ"
+    },
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
 }
 
 export { langArr };

@@ -57,12 +57,11 @@
         border: none;
         outline: none;
         font-weight: 700;
-        font-size: 24px;
+        font-size: rem(24);
         line-height: 28px;
         text-align: center;
         text-transform: uppercase;
         color: #ffffff;
-        padding: 24px 60px;
         cursor: pointer;
         transition: box-shadow 0.3s ease-in;
         &:hover {
@@ -89,6 +88,7 @@
         }
         .about {
             width: 100%;
+            text-align: center;
         }
         .title {
             white-space: initial;
