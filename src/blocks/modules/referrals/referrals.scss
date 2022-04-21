@@ -1,0 +1,97 @@
+.referrals {
+    .referral__wrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+    }
+    .img {
+        width: max(50%, 550px);
+        margin-top: -42px;
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: max(50%, 550px);
+    }
+    .title {
+        font-weight: 700;
+        font-size: 39px;
+        line-height: 45px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #dff4ff;
+        text-shadow: 0px 0px 24px rgba(255, 255, 255, 0.4), 0px 0px 4px rgba(255, 255, 255, 0.6);
+        margin-bottom: 24px;
+        white-space: nowrap;
+        &_color {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 140%;
+            color: #ea6012;
+            text-shadow: 0px 0px 16px rgba(234, 96, 18, 0.8), 0px 0px 4px rgba(234, 96, 18, 0.8);
+            margin-bottom: 4px;
+        }
+    }
+    .text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 40px;
+    }
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 287px;
+        height: 64px;
+        background: #ea6013;
+        box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.6), inset -1px 1px 2px rgba(255, 255, 255, 0.4),
+            inset 1px 1px 2px rgba(255, 255, 255, 0.4);
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        padding: 24px 60px;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease-in;
+        &:hover {
+            box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.6), inset -2px 2px 6px rgba(255, 255, 255, 0.4),
+                inset 2px 2px 6px rgba(255, 255, 255, 0.4);
+        }
+    }
+    @media (max-width: 1100px) {
+        .referral__wrap {
+            justify-content: center;
+        }
+        .img {
+            width: 100%;
+            margin-top: 0;
+            picture {
+                display: flex;
+                justify-content: center;
+            }
+            img {
+                width: 100%;
+                max-width: 500px;
+                object-fit: contain;
+            }
+        }
+        .about {
+            width: 100%;
+        }
+        .title {
+            white-space: initial;
+        }
+    }
+}

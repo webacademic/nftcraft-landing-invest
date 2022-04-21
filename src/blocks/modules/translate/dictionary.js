@@ -648,6 +648,23 @@ const langArr = {
         "en": "Partners",
         "ru": "Партнеры"
     },
+    // Refferals
+    "ref-title-color": {
+        "en": "MONETIZE YOUR REMMENDATIONS",
+        "ru": "МОНЕТЕЗИРУЙ СВОИ РЕКОМЕНДАЦИИ"
+    },
+    "ref-title": {
+        "en": "REFERRAL PROGRAM",
+        "ru": "РЕФЕРАЛЬНАЯ ПРОГРАММА "
+    },
+    "ref-text": {
+        "en": "Pay up to 10% of customer payments for the purchase of NCT tokens Partner's personal account with clear analytics and a reports",
+        "ru": "Решения NFTCRAFT сделают вашу игру эффективным источником дохода за счет совмещения игровых миров с блокчейном, технологиями масштабирования серверов и проверенной экономической моделью."
+    },
+    "ref-button": {
+        "en": "MORE DETAILED",
+        "ru": "ПОДРОБНЕЕ"
+    },
     // Footer
     "footer-about": {
         "en": "NFTcraft.game is an innovative Play to Earn platform where the potential of NFTs are realized. ",
