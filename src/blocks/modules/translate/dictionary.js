@@ -737,40 +737,40 @@ const langArr = {
     },
     // 
     "popup-ref-text-5": {
-        "en": "NCT purchase from 50 000 to 74 999 - 2% interest",
-        "ru": "от 50 000 до 74 999 NCT- получаете 2% "
+        "en": "NCT purchase from 5 000 to 7 499 - 2% interest",
+        "ru": "от 5 000 до 7 499 NCT- получаете 2% "
     },
     "popup-ref-text-6": {
-        "en": "NCT purchase from 75 000 to 99 999 - 3% interest",
-        "ru": "от 75 000 до 99 999 NCT - получаете 3%"
+        "en": "NCT purchase from 7 500 to 9 999 - 3% interest",
+        "ru": "от 7 500 до 9 999 NCT - получаете 3%"
     },
     "popup-ref-text-7": {
-        "en": "NCT purchase from 100 000 to 149 999 - 4% interest",
-        "ru": "от 100 000 до 149 999 NCT - получаете 4%"
+        "en": "NCT purchase from 10 000 to 14 999 - 4% interest",
+        "ru": "от 10 000 до 14 999 NCT - получаете 4%"
     },
     "popup-ref-text-8": {
-        "en": "NCT purchase from 150 000 to 199 999 - 5% interest",
-        "ru": "от 150 000 до 199 999 NCT - получаете 5%"
+        "en": "NCT purchase from 15 000 to 19 999 - 5% interest",
+        "ru": "от 15 000 до 19 999 NCT - получаете 5%"
     },
     "popup-ref-text-9": {
-        "en": "NCT purchase from 200 000 to 249 999 - 6% interest",
-        "ru": "от 200 000 до 249 999 NCT - получаете 6%"
+        "en": "NCT purchase from 20 000 to 24 999 - 6% interest",
+        "ru": "от 20 000 до 24 999 NCT - получаете 6%"
     },
     "popup-ref-text-10": {
-        "en": "NCT purchase from 250 000 to 299 999 - 7% interest",
-        "ru": "от 250 000 до 299 999 NCT - получаете 7% "
+        "en": "NCT purchase from 25 000 to 29 999 - 7% interest",
+        "ru": "от 25 000 до 29 999 NCT - получаете 7% "
     },
     "popup-ref-text-11": {
-        "en": "NCT purchase from 300 000 to 399 999 - 8% interest",
-        "ru": "от 300 000 до 399 999 NCT - получаете 8%"
+        "en": "NCT purchase from 30 000 to 39 999 - 8% interest",
+        "ru": "от 30 000 до 39 999 NCT - получаете 8%"
     },
     "popup-ref-text-12": {
-        "en": "NCT purchase from 400 000 to 499 999 - 9% interest",
-        "ru": "от 400 000 до 499 999 NCT - получаете 9%"
+        "en": "NCT purchase from 40 000 to 49 999 - 9% interest",
+        "ru": "от 40 000 до 49 999 NCT - получаете 9%"
     },
     "popup-ref-text-13": {
-        "en": "When you buy over 500,000  NCT - 10% interest  ",
-        "ru": "свыше 500 000  NCT - получаете 10%"
+        "en": "When you buy over 50,000  NCT - 10% interest  ",
+        "ru": "свыше 50 000  NCT - получаете 10%"
     },
     "popup-ref-hint": {
         "en": "Payments are made from the 1st to the 5th of each month",
