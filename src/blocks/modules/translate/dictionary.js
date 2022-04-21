@@ -657,9 +657,13 @@ const langArr = {
         "en": "REFERRAL PROGRAM",
         "ru": "РЕФЕРАЛЬНАЯ ПРОГРАММА "
     },
-    "ref-text": {
-        "en": "Pay up to 10% of customer payments for the purchase of NCT tokens Partner's personal account with clear analytics and a reports",
-        "ru": "Решения NFTCRAFT сделают вашу игру эффективным источником дохода за счет совмещения игровых миров с блокчейном, технологиями масштабирования серверов и проверенной экономической моделью."
+    "ref-text-1": {
+        "en": "Get rewarded up to 10% of the purchase amount of NCT tokens",
+        "ru": "Получай вознаграждение до 10% от суммы покупки токенов NCT"
+    },
+    "ref-text-2": {
+        "en": "Partner's personal account with transparent analytics and a full report",
+        "ru": "Личный кабинет партнёра с прозрачной аналитикой и полным отчетом"
     },
     "ref-button": {
         "en": "MORE DETAILED",
