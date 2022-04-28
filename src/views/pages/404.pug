@@ -1,0 +1,11 @@
+extends ../layouts/pages
+
+block variables
+	- const title = "NFTCraft - 404 page";
+
+block content
+	include ../../blocks/modules/header/header
+	include ../../blocks/modules/notfound/notfound
+
+block scripts
+	script(src="js/main.js")

@@ -1,0 +1,52 @@
+.notfound {
+    
+    background: url(./../../img/404/bg.png) center center no-repeat;
+    background-size: cover;
+    .container {
+        position: relative;
+        min-height: 100vh;
+    }
+    .error {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+
+    }
+    .dwarf {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 0;
+    }
+    .btn {
+        cursor: pointer;
+        position: absolute;
+        width: rem(288);
+        height: rem(70);
+        background: url(./../../img/404/btn.png) center center no-repeat;
+        background-size: 100% 100%;
+        font-weight: 700;
+font-size: rem(20);
+line-height: 130%;
+text-align: center;
+text-transform: uppercase;
+color: #FFFFFF;
+bottom: 5%;
+left: 50%;
+transform: translateX(-50%);
+    }
+}
+
+@media (max-width: $lgTableWidth) {
+    .notfound {
+        .dwarf {
+            display: none;
+        }
+        .error {
+            width: 80%;
+        }
+    }
+}
