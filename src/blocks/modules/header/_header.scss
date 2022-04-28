@@ -341,6 +341,44 @@
     }
 }
 
+
+.air {
+    .header {
+        .lang {
+            display: none;
+        }
+
+        .bottom {
+            display: none;
+        }
+        .burger-menu {
+            display: none;
+        }
+
+        .logo {
+            background: url(../../../img/header/logo-big.png) center center no-repeat;
+            background-size: contain;
+
+            picture {
+                display: none;
+            }
+
+            &_mobile {
+                width: 144px;
+                height: 28px;
+                display: block;
+                background: url(../../../img/header/logo-row.png) center center no-repeat;
+                background-size: contain;
+
+                picture {
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
+
 @media (max-width: 1100px) {
     .header {
         .top {
