@@ -16,6 +16,10 @@ const langArr = {
         "en": "Partners",
         "ru": "Партнеры"
     },
+    "menu-referrals":{
+        "en": "Partner program",
+        "ru": "Партнерская программа"
+    },
     "menu-invest":{
         "en": "For investors",
         "ru": "Инвесторам"
