@@ -44,3 +44,61 @@ footer {
         cursor: pointer;
     }
 }
+
+.sertik {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    font-size: 14px;
+    background: linear-gradient(253.76deg, #264951 0%, #083033 101.47%), #c4c4c4;
+    border: 1px solid #00f0ff;
+    z-index: 10;
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100px;
+        margin-right: 10px;
+    }
+    &__text {
+        color: #829196;
+        padding-bottom: 3px;
+    }
+    &__circle {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        background-color: #00f0ff;
+        box-shadow: 0px 0px 20px rgba(0, 240, 255, 0);
+        animation: sertik 2s infinite;
+    }
+}
+
+@keyframes sertik {
+    0% {
+        box-shadow: 0px 0px 10px rgba(0, 240, 255, 0.9);
+        transform: scale(1.1);
+    }
+    50% {
+        box-shadow: 0px 0px 0px rgba(0, 240, 255, 0);
+        transform: scale(1);
+    }
+    100% {
+        box-shadow: 0px 0px 10px rgba(0, 240, 255, 0.9);
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 576px) {
+    .sertik {
+        display: none;
+    }
+}
